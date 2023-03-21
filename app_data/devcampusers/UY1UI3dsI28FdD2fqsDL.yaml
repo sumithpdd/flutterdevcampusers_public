@@ -1,0 +1,27 @@
+winText: null
+session4: null
+website: null
+session3: null
+address:
+    zipcode: null
+    geo:
+        lng: '77.216721'
+        lat: '28.644800'
+    country: India
+    suite: null
+    city: null
+    street: null
+session2: null
+session1: null
+is_fav: null
+userStatus : 'accepted'
+isWinner: null
+phone: null
+name: 'Tejal Patil'
+id: '68'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 47000000

@@ -1,0 +1,27 @@
+winText: null
+session4: '0'
+website: null
+address:
+    zipcode: null
+    geo:
+        lng: '73.084488'
+        lat: '33.738045'
+    country: Pakistan
+    suite: null
+    city: null
+    street: null
+is_fav: null
+userStatus : 'accepted'
+isWinner: null
+phone: null
+name: 'Ariba Hussain'
+id: '22'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 33000000
+session1: '1'
+session2: '1'
+session3: '1'

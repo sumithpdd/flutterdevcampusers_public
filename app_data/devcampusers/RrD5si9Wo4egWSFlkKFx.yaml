@@ -1,0 +1,27 @@
+winText: null
+session4: '0'
+website: null
+session3: '1'
+address:
+    zipcode: null
+    geo:
+        lng: '2.4333'
+        lat: '53.5500'
+    country: 'United Kingdom'
+    suite: null
+    city: null
+    street: null
+session2: '1'
+session1: '1'
+is_fav: null
+userStatus : 'accepted'
+isWinner: null
+phone: null
+name: 'Danai Korre'
+id: '1'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 37000000

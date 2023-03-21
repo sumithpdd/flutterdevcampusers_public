@@ -1,29 +1,31 @@
+import 'package:devcamp_attendees/service/database_service.dart';
 import 'package:flutter/material.dart';
 
-import '../models/user.dart';
+import '../models/dev_camp_user.dart';
+import '../widgets/attendance_cell.dart';
 
 class ViewAttendanceAll extends StatelessWidget {
-  final List<User> users;
+  final List<DevCampUser> devcampusers;
   const ViewAttendanceAll({
     Key? key,
-    required this.users,
+    required this.devcampusers,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ViewAttendanceAllScreen(
-        users: users,
+        devcampusers: devcampusers,
       ),
     );
   }
 }
 
 class ViewAttendanceAllScreen extends StatefulWidget {
-  final List<User> users;
+  final List<DevCampUser> devcampusers;
   const ViewAttendanceAllScreen({
     Key? key,
-    required this.users,
+    required this.devcampusers,
   }) : super(key: key);
 
   @override
@@ -41,8 +43,19 @@ class _ViewAttendanceAllScreenState extends State<ViewAttendanceAllScreen> {
 
     return Scaffold(
         appBar: AppBar(
-          title: const Text('flutter devcamp mentees - Attendance'),
-        ),
+            title: const Text('flutter devcamp mentees - Attendance'),
+            actions: [
+              IconButton(
+                onPressed: () {
+                  DatabaseService().saveUsers(widget.devcampusers).then(
+                      (value) =>
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            content: Text("migrate $value"),
+                          )));
+                },
+                icon: const Icon(Icons.save_sharp),
+              ),
+            ]),
         body: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: SingleChildScrollView(
@@ -52,9 +65,15 @@ class _ViewAttendanceAllScreenState extends State<ViewAttendanceAllScreen> {
   Widget _buildBody(BuildContext context) {
     return DataTable(
       columnSpacing: 45,
-      columns: generateColumns(
-          ['NAME', "SESSION 1", "SESSION 2", "SESSION 3", "SESSION 4"]),
-      rows: widget.users.map((user) => generateRows(user)).toList(),
+      columns: generateColumns([
+        'NAME',
+        "SESSION 1",
+        "SESSION 2",
+        "SESSION 3",
+        "SESSION 4",
+        " Actions"
+      ]),
+      rows: widget.devcampusers.map((user) => generateRows(user)).toList(),
     );
   }
 
@@ -76,27 +95,26 @@ class _ViewAttendanceAllScreenState extends State<ViewAttendanceAllScreen> {
         .toList();
   }
 
-  DataRow generateRows(User user) {
+  DataRow generateRows(DevCampUser devcampuser) {
     return DataRow(cells: [
-      generateCells(user.name!),
-      generateCells(user.session1 ?? ""),
-      generateCells(user.session2 ?? ""),
-      generateCells(user.session3 ?? ""),
-      generateCells(user.session4 ?? ""),
+      AttendanceCell(
+        user: devcampuser,
+        propertyName: "name",
+      ).generateCells(),
+      AttendanceCell(user: devcampuser, propertyName: "session1")
+          .generateCells(),
+      AttendanceCell(user: devcampuser, propertyName: "session2")
+          .generateCells(),
+      AttendanceCell(user: devcampuser, propertyName: "session3")
+          .generateCells(),
+      AttendanceCell(
+        user: devcampuser,
+        propertyName: "session4",
+      ).generateCells(),
+      AttendanceCell(
+        user: devcampuser,
+        propertyName: "",
+      ).actionCell()
     ]);
-  }
-
-  DataCell generateCells(String data) {
-    return DataCell(Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        (data == '1')
-            ? const Icon(Icons.check_circle_outlined, color: Colors.green)
-            : (data == '0')
-                ? const Icon(Icons.close, color: Colors.redAccent)
-                : Text(data),
-      ],
-    ));
   }
 }

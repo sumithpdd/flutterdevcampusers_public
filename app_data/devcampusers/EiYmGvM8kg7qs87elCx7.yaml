@@ -1,0 +1,27 @@
+winText: null
+session4: '0'
+website: null
+session3: '1'
+address:
+    zipcode: null
+    geo:
+        lng: '77.216721'
+        lat: '28.644800'
+    country: India
+    suite: null
+    city: null
+    street: null
+session2: '0'
+session1: '1'
+is_fav: null
+userStatus : 'accepted'
+isWinner: null
+phone: null
+name: 'Maria Żelazowska'
+id: '79'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 41000000

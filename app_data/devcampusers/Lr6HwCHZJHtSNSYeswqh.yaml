@@ -1,0 +1,27 @@
+winText: 'Jetbrains License'
+session4: '0'
+website: null
+session3: '1'
+address:
+    zipcode: null
+    geo:
+        lng: '73.084488'
+        lat: '33.738045'
+    country: Pakistan
+    suite: null
+    city: null
+    street: null
+session2: '1'
+session1: '1'
+is_fav: null
+userStatus : 'accepted'
+isWinner: true
+phone: null
+name: 'Ruqaiya Sattar'
+id: '3'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 45000000

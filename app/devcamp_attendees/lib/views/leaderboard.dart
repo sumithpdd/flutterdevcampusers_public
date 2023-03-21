@@ -2,38 +2,34 @@
 
 import 'package:flutter/material.dart';
 
-import '../models/user.dart';
+import '../models/dev_camp_user.dart';
 
-class LeaderBoard extends StatefulWidget {
-  List<User> listWinners;
+class LeaderBoard extends StatelessWidget {
+  List<DevCampUser> listWinners;
   LeaderBoard({
     Key? key,
     required this.listWinners,
   }) : super(key: key);
 
-  @override
-  _LeaderBoardState createState() => _LeaderBoardState();
-}
-
-class _LeaderBoardState extends State<LeaderBoard> {
   int i = 0;
-  Color my = Colors.brown, CheckMyColor = Colors.white;
+
+  Color my = Colors.brown, checkMyColor = Colors.white;
 
   @override
   Widget build(BuildContext context) {
-    var r = TextStyle(color: Colors.purpleAccent, fontSize: 34);
+    var r = const TextStyle(color: Colors.purpleAccent, fontSize: 34);
     return Stack(
       children: <Widget>[
         Scaffold(
             body: Container(
-          margin: EdgeInsets.only(top: 65.0),
+          margin: const EdgeInsets.only(top: 65.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(left: 15.0, top: 10.0),
+                margin: const EdgeInsets.only(left: 15.0, top: 10.0),
                 child: RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                         text: "Leader",
                         style: TextStyle(
                             color: Colors.deepPurple,
@@ -48,7 +44,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                               fontWeight: FontWeight.bold))
                     ])),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 15.0),
                 child: Text(
                   'Global Rank Board: ',
@@ -57,7 +53,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
               ),
               Flexible(
                   child: ListView.builder(
-                      itemCount: widget.listWinners.length,
+                      itemCount: listWinners.length,
                       itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.symmetric(
@@ -91,18 +87,17 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                                     decoration: BoxDecoration(
                                                         shape: BoxShape.circle,
                                                         image: DecorationImage(
-                                                            image: (widget
-                                                                        .listWinners[
+                                                            image: (listWinners[
                                                                             index]
-                                                                        .photoUrl ==
+                                                                        .profileImageUrl ==
                                                                     null)
-                                                                ? AssetImage(
+                                                                ? const AssetImage(
                                                                         'assets/Flutter_Devcamp-logos_transparent.png')
                                                                     as ImageProvider
-                                                                : NetworkImage(widget
-                                                                    .listWinners[
-                                                                        index]
-                                                                    .photoUrl!),
+                                                                : NetworkImage(
+                                                                    listWinners[
+                                                                            index]
+                                                                        .profileImageUrl!),
                                                             fit:
                                                                 BoxFit.fill)))),
                                           ],
@@ -120,16 +115,14 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                             Container(
                                                 alignment: Alignment.centerLeft,
                                                 child: Text(
-                                                  widget
-                                                      .listWinners[index].name!,
-                                                  style: TextStyle(
+                                                  listWinners[index].name!,
+                                                  style: const TextStyle(
                                                       color: Colors.deepPurple,
                                                       fontWeight:
                                                           FontWeight.w500),
                                                   maxLines: 6,
                                                 )),
-                                            Text(widget
-                                                .listWinners[index].winText!),
+                                            Text(listWinners[index].winText!),
                                           ],
                                         ),
                                       ),
@@ -146,7 +139,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                                       "🥉",
                                                       style: r,
                                                     )
-                                                  : Text(''),
+                                                  : const Text(''),
                                     ],
                                   ),
                                 ],

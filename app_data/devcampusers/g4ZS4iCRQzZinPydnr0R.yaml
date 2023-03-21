@@ -1,0 +1,27 @@
+winText: 'Flutter Book Code'
+session4: '0'
+website: null
+address:
+    zipcode: null
+    geo:
+        lng: '46.372330'
+        lat: '40.687859'
+    country: Azerbaijan
+    suite: null
+    city: null
+    street: null
+is_fav: null
+userStatus : 'accepted'
+isWinner: true
+phone: null
+name: 'Bahar Ramazanova'
+id: '15'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 34000000
+session1: '1'
+session2: '1'
+session3: '1'

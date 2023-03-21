@@ -1,0 +1,6 @@
+app/devcamp_attendees/android/app/google-services.json
+app/devcamp_attendees/ios/firebase_app_id_file.json
+app/devcamp_attendees/ios/Runner/GoogleService-Info.plist
+app/devcamp_attendees/lib/firebase_options.dart
+app/devcamp_attendees/macos/firebase_app_id_file.json
+app/devcamp_attendees/macos/Runner/GoogleService-Info.plist

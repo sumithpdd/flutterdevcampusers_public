@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../models/user.dart';
+import '../models/dev_camp_user.dart';
 
 class MapScreen extends StatefulWidget {
-  List<User> listUsers;
+  List<DevCampUser> listUsers;
   MapScreen({
     Key? key,
     required this.listUsers,
@@ -50,17 +50,17 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  Set<Marker> _getMarkers(List<User> users) {
+  Set<Marker> _getMarkers(List<DevCampUser> users) {
     List<Marker> markers = [];
 
-    for (User user in users) {
+    for (DevCampUser devcampuser in users) {
       markers.add(
         Marker(
-          markerId: MarkerId("Marker ${user.id}"),
-          position: LatLng(double.parse(user.address!.geo!.lat!),
-              double.parse(user.address!.geo!.lng!)),
+          markerId: MarkerId("Marker ${devcampuser.id}"),
+          position: LatLng(double.parse(devcampuser.address!.geo!.lat!),
+              double.parse(devcampuser.address!.geo!.lng!)),
           draggable: false,
-          infoWindow: InfoWindow(title: user.name, snippet: '*'),
+          infoWindow: InfoWindow(title: devcampuser.name, snippet: '*'),
           onDragEnd: (value) {
             // value is the new position
           },

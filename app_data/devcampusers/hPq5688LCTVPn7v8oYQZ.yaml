@@ -1,0 +1,27 @@
+winText: null
+session4: '0'
+website: null
+session3: '0'
+address:
+    zipcode: null
+    geo:
+        lng: '-0.118092'
+        lat: '51.509865'
+    country: England
+    suite: null
+    city: null
+    street: null
+session2: '0'
+session1: '0'
+is_fav: null
+userStatus : 'accepted'
+isWinner: null
+phone: null
+name: 'Charlene Kuye '
+id: '4'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 36000000

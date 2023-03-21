@@ -3,950 +3,1242 @@
       "id":1,
       "name":"Danai Korre",
       "address":{
-         "Country":"United Kingdom",
+         "country":"United Kingdom",
          "geo":{
             "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"1",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
    },
    {
       "id":2,
       "name":"Hüseyin",
       "address":{
-         "Country":"Turkey",
+         "country":"Turkey",
          "geo":{
             "lat":"41.015137",
             "lng":"28.979530"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":3,
       "name":"Ruqaiya Sattar",
       "address":{
-         "Country":"Pakistan",
+         "country":"Pakistan",
          "geo":{
             "lat":"33.738045",
             "lng":"73.084488"
          }
       },
-      "Accepted":"Yes",
-      "isWinner":true ,
-      "winText" :"Jetbrains License"
-      ,"photoUrl":"https://pbs.twimg.com/profile_images/1616685563871985664/6Anp9K70_400x400.jpg"
-      
+      "accepted":"Yes",
+      "isWinner":true,
+      "winText":"Jetbrains License",
+      "photoUrl":"https://pbs.twimg.com/profile_images/1616685563871985664/6Anp9K70_400x400.jpg",
+      "session1":"1",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
    },
    {
       "id":4,
       "name":"Charlene Kuye ",
       "address":{
-         "Country":"England",
+         "country":"England",
          "geo":{
             "lat":"51.509865",
             "lng":"-0.118092"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":5,
       "name":"Anshita Mehra",
       "address":{
-         "Country":"United kingdom",
+         "country":"United kingdom",
          "geo":{
-             "lat":"53.5500",
+            "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":6,
       "name":"Renata Cristina Machado Nunes",
       "address":{
-         "Country":"United kingdom",
+         "country":"United kingdom",
          "geo":{
-             "lat":"53.5500",
+            "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":7,
       "name":"Shivangi shah",
       "address":{
-         "Country":"United kingdom",
+         "country":"United kingdom",
          "geo":{
             "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":8,
       "name":"Kayembe Josephine ",
       "address":{
-         "Country":"République Démocratique du Congo",
+         "country":"République Démocratique du Congo",
          "geo":{
             "lat":"-11.666667",
             "lng":"27.483334"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":9,
       "name":"Patricia Fernandes Goncalves",
       "address":{
-         "Country":"Ireland",
+         "country":"Ireland",
          "geo":{
             "lat":"53.350140",
             "lng":"-6.266155"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":10,
       "name":"Yumi Kobayashi ",
       "address":{
-         "Country":"Japan",
+         "country":"Japan",
          "geo":{
             "lat":"35.652832",
             "lng":"139.839478"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":11,
       "name":"Rajeev GM",
       "address":{
-         "Country":"United Kingdom",
+         "country":"United Kingdom",
          "geo":{
             "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"No"
+      "accepted":"No",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":12,
       "name":"Debajit Pramanick ",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":13,
       "name":"Nilakshi Chakraborty ",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":14,
       "name":"Soham Sadhukhan",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"No"
+      "accepted":"No",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":15,
       "name":"Bahar Ramazanova",
       "address":{
-         "Country":"Azerbaijan",
+         "country":"Azerbaijan",
          "geo":{
             "lat":"40.687859",
             "lng":"46.372330"
          }
       },
-      "Accepted":"Yes",
-      "isWinner":true ,
-      "winText" :"Flutter Book Code",
-      "photoUrl":"https://ca.slack-edge.com/TGT6YF2J1-U04TJAHCKT3-484b5712e156-512"
- 
+      "accepted":"Yes",
+      "isWinner":true,
+      "winText":"Flutter Book Code",
+      "photoUrl":"https://ca.slack-edge.com/TGT6YF2J1-U04TJAHCKT3-484b5712e156-512",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":16,
       "name":"Arjo Ghosh",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":17,
       "name":"Saheli Mahapatra",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":18,
       "name":"Hafiz Ramiz",
       "address":{
-         "Country":"Turkey",
+         "country":"Turkey",
          "geo":{
             "lat":"41.015137",
             "lng":"28.979530"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":19,
       "name":"Yerin Hong",
       "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":20,
-      "name":"Divyangi Raghav",
-      "address":{
-         "Country":"India",
-         "geo":{
-            "lat":"28.644800",
-            "lng":"77.216721"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":21,
-      "name":"Devanshi Gor",
-      "address":{
-         "Country":"India",
-         "geo":{
-            "lat":"28.644800",
-            "lng":"77.216721"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":22,
-      "name":"Ariba Hussain",
-      "address":{
-         "Country":"Pakistan",
-         "geo":{
-            "lat":"33.738045",
-            "lng":"73.084488"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":23,
-      "name":"Asma parveen",
-      "address":{
-         "Country":"India",
-         "geo":{
-            "lat":"28.644800",
-            "lng":"77.216721"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":24,
-      "name":"Alcia Moncrieffe",
-      "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":26,
-      "name":"Asma parveen",
-      "address":{
-         "Country":"India",
-         "geo":{
-            "lat":"28.644800",
-            "lng":"77.216721"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":27,
-      "name":"Swati sahu",
-      "address":{
-         "Country":"India",
-         "geo":{
-            "lat":"28.644800",
-            "lng":"77.216721"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":28,
-      "name":"Ankita Malik",
-      "address":{
-         "Country":"India",
-         "geo":{
-            "lat":"28.644800",
-            "lng":"77.216721"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":29,
-      "name":"Monica Martin",
-      "address":{
-         "Country":"Spain",
-         "geo":{
-            "lat":"40.416775",
-            "lng":"-3.703790"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":30,
-      "name":"Muhammad Hafeez ",
-      "address":{
-         "Country":"Pakistan",
-         "geo":{
-            "lat":"31.582045",
-            "lng":"74.329376"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":31,
-      "name":"Bettina Carrizo",
-      "address":{
-         "Country":"Uruguay ",
-         "geo":{
-            "lat":"-37.3159",
-            "lng":"81.1496"
-         }
-      },
-      "Accepted":"Yes",
-      "isWinner":true ,
-      "winText" :"Flutter Book Code",
-      "photoUrl":"https://ca.slack-edge.com/TGT6YF2J1-U04TJAHHAUR-fb43301bf437-512"
-   },
-   {
-      "id":32,
-      "name":"Cecilia Rivero",
-      "address":{
-         "Country":"United Kingdom ",
-         "geo":{
-            "lat":"-37.3159",
-            "lng":"81.1496"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":33,
-      "name":"priyanshu naskar",
-      "address":{
-         "Country":"India",
-         "geo":{
-            "lat":"28.644800",
-            "lng":"77.216721"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":34,
-      "name":"Amna Ijaz",
-      "address":{
-         "Country":"Lahore",
-         "geo":{
-            "lat":"31.582045",
-            "lng":"74.329376"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":35,
-      "name":"Maaz ajmal",
-      "address":{
-         "Country":"Pakistan",
-         "geo":{
-            "lat":"31.582045",
-            "lng":"74.329376"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":36,
-      "name":"Sawda Onanuga",
-      "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":37,
-      "name":"Rohan Kalwar",
-      "address":{
-         "Country":"India",
-         "geo":{
-            "lat":"28.644800",
-            "lng":"77.216721"
-         }
-      },
-      "Accepted":"No"
-   },
-   {
-      "id":38,
-      "name":"Kayembe Joséphine",
-      "address":{
-         "Country":"D.R.Congo",
-         "geo":{
-            "lat":"-11.666667",
-            "lng":"27.483334"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":39,
-      "name":"Tiya Bansal",
-      "address":{
-         "Country":"India",
-         "geo":{
-            "lat":"28.644800",
-            "lng":"77.216721"
-         }
-      },
-      "Accepted":"Yes",
-      "isWinner":true ,
-      "winText" :"Jetbrains License",
-      "photoUrl":"https://ca.slack-edge.com/TGT6YF2J1-U02HGCH1V09-67705875d800-512"
-   },
-   {
-      "id":40,
-      "name":"Nipuna Sankalpa Thalpage",
-      "address":{
-         "Country":"Sri Lanka",
-         "geo":{
-            "lat":"6.894070",
-            "lng":"79.902481"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":41,
-      "name":"Anish Kumar Thakur",
-      "address":{
-         "Country":"Nepal",
-         "geo":{
-            "lat":"28.204266",
-            "lng":"82.594307"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":42,
-      "name":"Fatih Gunes",
-      "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":43,
-      "name":"Megha Anil Patil",
-      "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":44,
-      "name":"Jozeene Bailey",
-      "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":45,
-      "name":"Monika Narusyte",
-      "address":{
-         "Country":"Lithuiania",
-         "geo":{
-            "lat":"-37.3159",
-            "lng":"81.1496"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":46,
-      "name":"Marta Foderaro",
-      "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":47,
-      "name":"Shrutika Pedamkar",
-      "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":48,
-      "name":"Cecilia Rivero",
-      "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":49,
-      "name":"Marta Foderaro",
-      "address":{
-         "Country":"United Kingdom",
+         "country":"United Kingdom",
          "geo":{
             "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
-      "id":50,
-      "name":"Shivangi Shah",
+      "id":20,
+      "name":"Divyangi Raghav",
       "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":51,
-      "name":"Alexandra K Riemann",
-      "address":{
-         "Country":"United Kingdom",
-         "geo":{
-             "lat":"53.5500",
-            "lng":"2.4333"
-         }
-      },
-      "Accepted":"Yes"
-   },
-   {
-      "id":52,
-      "name":"Parul Rajoriya",
-      "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
-      "id":53,
-      "name":"Sanandita Das",
+      "id":21,
+      "name":"Devanshi Gor",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
-      "id":54,
+      "id":22,
+      "name":"Ariba Hussain",
+      "address":{
+         "country":"Pakistan",
+         "geo":{
+            "lat":"33.738045",
+            "lng":"73.084488"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":23,
+      "name":"Asma parveen",
+      "address":{
+         "country":"India",
+         "geo":{
+            "lat":"28.644800",
+            "lng":"77.216721"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":24,
+      "name":"Alcia Moncrieffe",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":26,
+      "name":"Asma parveen",
+      "address":{
+         "country":"India",
+         "geo":{
+            "lat":"28.644800",
+            "lng":"77.216721"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":27,
+      "name":"Swati sahu",
+      "address":{
+         "country":"India",
+         "geo":{
+            "lat":"28.644800",
+            "lng":"77.216721"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":28,
+      "name":"Ankita Malik",
+      "address":{
+         "country":"India",
+         "geo":{
+            "lat":"28.644800",
+            "lng":"77.216721"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":29,
+      "name":"Monica Martin",
+      "address":{
+         "country":"Spain",
+         "geo":{
+            "lat":"40.416775",
+            "lng":"-3.703790"
+         }
+      },
+      "accepted":"Yes",
+      "isWinner":true,
+      "winText":"Flutter Book Code",
+      "session1":"0",
+      "session2":"0",
+      "session3":"1",
+      "session4":"N/A"
+   },
+   {
+      "id":30,
+      "name":"Muhammad Hafeez ",
+      "address":{
+         "country":"Pakistan",
+         "geo":{
+            "lat":"31.582045",
+            "lng":"74.329376"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":31,
       "name":"Bettina Carrizo",
       "address":{
-         "Country":"Uruguay",
+         "country":"Uruguay ",
          "geo":{
             "lat":"-37.3159",
             "lng":"81.1496"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "isWinner":true,
+      "winText":"Flutter Book Code",
+      "photoUrl":"https://ca.slack-edge.com/TGT6YF2J1-U04TJAHHAUR-fb43301bf437-512",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
+   
+   {
+      "id":32,
+      "name":"Cecilia Rivero",
+      "address":{
+         "country":"United Kingdom ",
+         "geo":{
+            "lat":"-37.3159",
+            "lng":"81.1496"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"1",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
+   },
+   {
+      "id":33,
+      "name":"priyanshu naskar",
+      "address":{
+         "country":"India",
+         "geo":{
+            "lat":"28.644800",
+            "lng":"77.216721"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":34,
+      "name":"Amna Ijaz",
+      "address":{
+         "country":"Lahore",
+         "geo":{
+            "lat":"31.582045",
+            "lng":"74.329376"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"1",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
+   },
+   {
+      "id":35,
+      "name":"Maaz ajmal",
+      "address":{
+         "country":"Pakistan",
+         "geo":{
+            "lat":"31.582045",
+            "lng":"74.329376"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":36,
+      "name":"Sawda Onanuga",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":37,
+      "name":"Rohan Kalwar",
+      "address":{
+         "country":"India",
+         "geo":{
+            "lat":"28.644800",
+            "lng":"77.216721"
+         }
+      },
+      "accepted":"No",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":38,
+      "name":"Kayembe Joséphine",
+      "address":{
+         "country":"D.R.Congo",
+         "geo":{
+            "lat":"-11.666667",
+            "lng":"27.483334"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":39,
+      "name":"Tiya Bansal",
+      "address":{
+         "country":"India",
+         "geo":{
+            "lat":"28.644800",
+            "lng":"77.216721"
+         }
+      },
+      "accepted":"Yes",
+      "isWinner":true,
+      "winText":"Jetbrains License",
+      "photoUrl":"https://ca.slack-edge.com/TGT6YF2J1-U02HGCH1V09-67705875d800-512",
+      "session1":"1",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
+   },
+   {
+      "id":40,
+      "name":"Nipuna Sankalpa Thalpage",
+      "address":{
+         "country":"Sri Lanka",
+         "geo":{
+            "lat":"6.894070",
+            "lng":"79.902481"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"1",
+      "session2":"1",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":41,
+      "name":"Anish Kumar Thakur",
+      "address":{
+         "country":"Nepal",
+         "geo":{
+            "lat":"28.204266",
+            "lng":"82.594307"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":42,
+      "name":"Fatih Gunes",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":43,
+      "name":"Megha Anil Patil",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"1",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
+   },
+   {
+      "id":44,
+      "name":"Jozeene Bailey",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":45,
+      "name":"Monika Narusyte",
+      "address":{
+         "country":"Lithuiania",
+         "geo":{
+            "lat":"-37.3159",
+            "lng":"81.1496"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"1",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
+   },
+   {
+      "id":46,
+      "name":"Marta Foderaro",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"1",
+      "session2":"1",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":47,
+      "name":"Shrutika Pedamkar",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":48,
+      "name":"Cecilia Rivero",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes"
+   },
+   {
+      "id":49,
+      "name":"Marta Foderaro",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":50,
+      "name":"Shivangi Shah",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"1",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
+   },
+   {
+      "id":51,
+      "name":"Alexandra K Riemann",
+      "address":{
+         "country":"United Kingdom",
+         "geo":{
+            "lat":"53.5500",
+            "lng":"2.4333"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":52,
+      "name":"Parul Rajoriya",
+      "address":{
+         "country":"India",
+         "geo":{
+            "lat":"28.644800",
+            "lng":"77.216721"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   {
+      "id":53,
+      "name":"Sanandita Das",
+      "address":{
+         "country":"India",
+         "geo":{
+            "lat":"28.644800",
+            "lng":"77.216721"
+         }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
+   },
+   
    {
       "id":55,
       "name":"Bomee Ryu",
       "address":{
-         "Country":"United Kingdom",
+         "country":"United Kingdom",
          "geo":{
-             "lat":"53.5500",
+            "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":56,
       "name":"Pratiksha Aher",
       "address":{
-         "Country":"India",
+         "country":"India",
          "State":"Aurangabad ",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":57,
       "name":"Divya Raju Pawar",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":58,
       "name":"Payal hanumant vibhute",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":59,
       "name":"Ashwini Sanjay Nandure",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":60,
       "name":"Shubhangini Vasantrao Sonawane ",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":61,
       "name":"NIHARIKA CHINTHA",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"1",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
    },
    {
       "id":62,
       "name":"Preethy Ani Jose",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":63,
       "name":"Shreya Bhat",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":64,
       "name":"Chetna Mangal Kuthe ",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":65,
       "name":"CHIoma Okanu",
       "address":{
-         "Country":"United Kingdom",
+         "country":"United Kingdom",
          "geo":{
             "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":66,
       "name":"Mukarrim Adam",
       "address":{
-         "Country":"United Kingdom",
+         "country":"United Kingdom",
          "geo":{
             "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":67,
       "name":"Mallory Chu",
       "address":{
-         "Country":"United Kingdom",
+         "country":"United Kingdom",
          "geo":{
             "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":68,
       "name":"Tejal Patil",
       "address":{
-         "Country":"India",
-        "geo":{
+         "country":"India",
+         "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes"
    },
    {
       "id":69,
       "name":"Tibor Ormosi",
       "address":{
-         "Country":"United Kingdom",
+         "country":"United Kingdom",
          "geo":{
             "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":70,
       "name":"Komal Shivaji kamble",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":71,
       "name":"Cristhian Caicedo Ortiz",
       "address":{
-         "Country":"Colombia ",
+         "country":"Colombia ",
          "geo":{
             "lat":"-37.3159",
             "lng":"81.1496"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"0",
+      "session3":"0",
+      "session4":"N/A"
    },
    {
       "id":72,
       "name":"Heba",
       "address":{
-         "Country":"Egypt ",
+         "country":"Egypt ",
          "geo":{
             "lat":"-37.3159",
             "lng":"81.1496"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
    },
    {
       "id":73,
       "name":"Ankita Deepak Suryawanshi ",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
    },
    {
       "id":74,
       "name":"Cynthia Mba",
-      "Country":"United Kingdom ",
+      "country":"United Kingdom ",
       "address":{
-         "Country":"United Kingdom",
+         "country":"United Kingdom",
          "geo":{
             "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
    },
    {
       "id":75,
       "name":"Liana Hayrapetyan",
       "address":{
-         "Country":"United Kingdom",
+         "country":"United Kingdom",
          "geo":{
             "lat":"53.5500",
             "lng":"2.4333"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
    },
    {
       "id":76,
       "name":"Moyinoluwa Shabi",
       "address":{
-         "Country":"Nigeria ",
+         "country":"Nigeria ",
          "geo":{
             "lat":"-37.3159",
             "lng":"81.1496"
          }
-      }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
    },
    {
       "id":77,
       "name":"Sreedevi C",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
-      }
+      },
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
    },
    {
       "id":78,
       "name":" nishth asaraswat2",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"0",
+      "session2":"1",
+      "session3":"1",
+      "session4":"N/A"
    },
    {
       "id":79,
       "name":"Maria Żelazowska",
       "address":{
-         "Country":"India",
+         "country":"India",
          "geo":{
             "lat":"28.644800",
             "lng":"77.216721"
          }
       },
-      "Accepted":"Yes"
+      "accepted":"Yes",
+      "session1":"1",
+      "session2":"0",
+      "session3":"1",
+      "session4":"N/A"
    }
 ]

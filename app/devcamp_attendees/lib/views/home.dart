@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => ViewAttendanceAllScreen(
-                          users: controller.listAcceptedUsers,
+                          devcampusers: controller.listAcceptedUsers,
                         ),
                       ),
                     );
@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
               ],
             ),
             body: SafeArea(
-              child: controller.list.isNotEmpty
+              child: controller.listUsers.isNotEmpty
                   ? MapScreen(listUsers: controller.listUsers)
                   : const Center(child: CircularProgressIndicator()),
             ),

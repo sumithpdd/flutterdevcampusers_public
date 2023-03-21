@@ -1,0 +1,27 @@
+winText: null
+session4: '0'
+website: null
+address:
+    zipcode: null
+    geo:
+        lng: '77.216721'
+        lat: '28.644800'
+    country: India
+    suite: null
+    city: null
+    street: null
+is_fav: null
+userStatus : 'accepted'
+isWinner: null
+phone: null
+name: ' nishth asaraswat2'
+id: '78'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 26000000
+session1: '0'
+session2: '0'
+session3: '0'

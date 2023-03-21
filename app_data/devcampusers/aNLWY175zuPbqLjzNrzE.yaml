@@ -1,0 +1,27 @@
+winText: null
+session4: '0'
+website: null
+session3: '0'
+address:
+    zipcode: null
+    geo:
+        lng: '2.4333'
+        lat: '53.5500'
+    country: 'United Kingdom'
+    suite: null
+    city: null
+    street: null
+session2: '0'
+session1: '0'
+is_fav: null
+userStatus : 'accepted'
+isWinner: null
+phone: null
+name: 'Mallory Chu'
+id: '67'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 41000000

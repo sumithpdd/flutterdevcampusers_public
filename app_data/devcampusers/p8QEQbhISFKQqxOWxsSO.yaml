@@ -1,0 +1,27 @@
+winText: null
+session4: '0'
+website: null
+session3: '1'
+address:
+    zipcode: null
+    geo:
+        lng: '81.1496'
+        lat: '-37.3159'
+    country: 'Egypt '
+    suite: null
+    city: null
+    street: null
+session2: '1'
+session1: '0'
+is_fav: null
+userStatus : 'accepted'
+isWinner: null
+phone: null
+name: Heba
+id: '72'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 39000000

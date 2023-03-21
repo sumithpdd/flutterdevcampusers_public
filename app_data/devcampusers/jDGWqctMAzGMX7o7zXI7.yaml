@@ -1,0 +1,27 @@
+winText: 'Flutter Book Code'
+session4: '0'
+website: null
+session3: '1'
+address:
+    zipcode: null
+    geo:
+        lng: '-3.703790'
+        lat: '40.416775'
+    country: Spain
+    suite: null
+    city: null
+    street: null
+session2: '0'
+session1: '0'
+is_fav: null
+userStatus : 'accepted'
+isWinner: true
+phone: null
+name: 'Monica Martin'
+id: '29'
+profileImageUrl: null
+email: null
+displayName: null
+timestamp:
+    _seconds: 1679333023
+    _nanoseconds: 42000000
