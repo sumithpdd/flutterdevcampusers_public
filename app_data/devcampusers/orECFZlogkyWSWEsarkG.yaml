@@ -11,17 +11,17 @@ address:
     suite: null
     city: null
     street: null
-session2: '0'
-session1: '0'
+userStatus: accepted
+displayName: null
 is_fav: null
-userStatus : 'accepted'
 isWinner: null
 phone: null
 name: 'Hafiz Ramiz'
 id: '18'
 profileImageUrl: null
 email: null
-displayName: null
 timestamp:
-    _seconds: 1679333023
     _nanoseconds: 39000000
+    _seconds: 1679333023
+session1: '1'
+session2: '1'

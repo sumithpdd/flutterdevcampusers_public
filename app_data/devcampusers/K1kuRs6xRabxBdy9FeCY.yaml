@@ -12,16 +12,16 @@ address:
     city: null
     street: null
 session2: '1'
-session1: '0'
+userStatus: accepted
+displayName: null
 is_fav: null
-userStatus : 'accepted'
 isWinner: null
 phone: null
 name: 'Liana Hayrapetyan'
 id: '75'
 profileImageUrl: null
 email: null
-displayName: null
 timestamp:
-    _seconds: 1679333023
     _nanoseconds: 40000000
+    _seconds: 1679333023
+session1: '1'

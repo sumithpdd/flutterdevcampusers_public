@@ -1,7 +1,6 @@
 winText: null
 session4: '0'
 website: null
-session3: '0'
 address:
     zipcode: null
     geo:
@@ -12,16 +11,17 @@ address:
     city: null
     street: null
 session2: '0'
-session1: '0'
+userStatus: accepted
+displayName: null
 is_fav: null
-userStatus : 'accepted'
 isWinner: null
 phone: null
 name: 'Parul Rajoriya'
 id: '52'
 profileImageUrl: null
 email: null
-displayName: null
 timestamp:
-    _seconds: 1679333023
     _nanoseconds: 44000000
+    _seconds: 1679333023
+session1: '1'
+session3: '1'

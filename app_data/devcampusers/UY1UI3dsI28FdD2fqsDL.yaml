@@ -12,16 +12,16 @@ address:
     city: null
     street: null
 session2: null
+userStatus: accepted
 session1: null
+displayName: null
 is_fav: null
-userStatus : 'accepted'
 isWinner: null
 phone: null
 name: 'Tejal Patil'
 id: '68'
 profileImageUrl: null
 email: null
-displayName: null
 timestamp:
-    _seconds: 1679333023
     _nanoseconds: 47000000
+    _seconds: 1679333023

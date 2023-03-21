@@ -1,5 +1,4 @@
 winText: null
-session4: '0'
 website: null
 session3: '1'
 address:
@@ -12,16 +11,17 @@ address:
     city: null
     street: null
 session2: '0'
+userStatus: accepted
 session1: '1'
+displayName: null
 is_fav: null
-userStatus : 'accepted'
 isWinner: null
 phone: null
 name: 'Maria Żelazowska'
 id: '79'
 profileImageUrl: null
 email: null
-displayName: null
 timestamp:
-    _seconds: 1679333023
     _nanoseconds: 41000000
+    _seconds: 1679333023
+session4: '1'

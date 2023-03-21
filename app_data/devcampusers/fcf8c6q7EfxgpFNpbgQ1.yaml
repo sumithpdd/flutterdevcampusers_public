@@ -1,7 +1,5 @@
 winText: 'Flutter Book Code'
-session4: '0'
 website: null
-session3: '0'
 address:
     zipcode: null
     geo:
@@ -11,17 +9,19 @@ address:
     suite: null
     city: null
     street: null
+userStatus: accepted
+session2: '1'
 session1: '0'
+displayName: null
 is_fav: null
-userStatus : 'accepted'
 isWinner: true
 phone: null
 name: 'Bettina Carrizo'
 id: '31'
 profileImageUrl: null
 email: null
-displayName: null
 timestamp:
-    _seconds: 1679333023
     _nanoseconds: 35000000
-session2: '1'
+    _seconds: 1679333023
+session3: '1'
+session4: '1'

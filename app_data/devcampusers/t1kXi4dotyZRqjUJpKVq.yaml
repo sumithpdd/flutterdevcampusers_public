@@ -12,16 +12,16 @@ address:
     city: null
     street: null
 session2: '0'
+userStatus: accepted
 session1: '0'
+displayName: null
 is_fav: null
-userStatus : 'accepted'
 isWinner: null
 phone: null
 name: 'Anshita Mehra'
 id: '5'
 profileImageUrl: null
 email: null
-displayName: null
 timestamp:
-    _seconds: 1679333023
     _nanoseconds: 32000000
+    _seconds: 1679333023
