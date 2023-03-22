@@ -62,6 +62,26 @@ class DatabaseService {
     });
   }
 
+  void updateUser(
+      String id,
+      String name,
+      String bio,
+      String profileImageUrl,
+      double rating,
+      String? userStatus,
+      Timestamp? acceptedOn,
+      Timestamp? confirmedOn) async {
+    usersRef.doc(id).update({
+      "name": name,
+      "bio": bio,
+      "profileImageUrl": profileImageUrl,
+      "rating": rating,
+      "userStatus": userStatus,
+      "acceptedOn": acceptedOn,
+      "confirmedOn": confirmedOn,
+    });
+  }
+
   Future<void> deleteUser(String userId) async {
     var snapshot = usersRef.doc(userId);
 

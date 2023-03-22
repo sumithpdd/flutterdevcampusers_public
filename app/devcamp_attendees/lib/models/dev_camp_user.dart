@@ -27,29 +27,31 @@ class DevCampUser {
 
   Timestamp? acceptedOn;
   Timestamp? confirmedOn;
-  DevCampUser({
-    this.id,
-    this.name,
-    this.bio,
-    this.displayName,
-    this.email,
-    this.address,
-    this.phone,
-    this.website,
-    this.company,
-    this.isFav,
-    this.isWinner,
-    this.winText,
-    this.profileImageUrl,
-    this.userStatus,
-    this.acceptedOn,
-    this.confirmedOn,
-    this.rating,
-    this.session1,
-    this.session2,
-    this.session3,
-    this.session4,
-  });
+
+  String? feedback;
+  DevCampUser(
+      {this.id,
+      this.name,
+      this.bio,
+      this.displayName,
+      this.email,
+      this.address,
+      this.phone,
+      this.website,
+      this.company,
+      this.isFav,
+      this.isWinner,
+      this.winText,
+      this.profileImageUrl,
+      this.userStatus,
+      this.acceptedOn,
+      this.confirmedOn,
+      this.rating,
+      this.session1,
+      this.session2,
+      this.session3,
+      this.session4,
+      this.feedback});
 
   DevCampUser.fromJson(Map<String, dynamic> json) {
     id = json['id'].toString();

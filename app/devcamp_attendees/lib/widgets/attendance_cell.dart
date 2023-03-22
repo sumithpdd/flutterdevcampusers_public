@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:devcamp_attendees/widgets/user_details_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:toggle_switch/toggle_switch.dart';
@@ -44,23 +45,31 @@ class AttendanceCell {
         : Text(data));
   }
 
-  actionCell() {
+  actionCell(BuildContext context) {
     return DataCell(SizedBox(
-      child: MaterialButton(
-        color: Colors.redAccent,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0),
-        ),
-        child: const Text(
-          'delete',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        onPressed: () {
-          DatabaseService().deleteUser(user.id!);
-        },
+        child: MaterialButton(
+      color: Colors.green,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30.0),
       ),
-    ));
+      child: const Text(
+        'info',
+        style: TextStyle(
+          color: Colors.white,
+        ),
+      ),
+      onPressed: () {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return UserDetailsDialog(
+              devcampusers: user,
+            );
+
+            // DatabaseService().deleteUser(user.id!);
+          },
+        );
+      },
+    )));
   }
 }
