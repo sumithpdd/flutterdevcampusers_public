@@ -17,7 +17,6 @@ is_fav: null
 isWinner: true
 phone: null
 name: 'Ruqaiya Sattar'
-id: '3'
 email: null
 timestamp:
     _nanoseconds: 45000000

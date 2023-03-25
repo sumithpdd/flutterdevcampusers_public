@@ -15,7 +15,6 @@ is_fav: null
 isWinner: null
 phone: null
 name: 'Tibor Ormosi'
-id: '69'
 email: null
 timestamp:
     _nanoseconds: 48000000

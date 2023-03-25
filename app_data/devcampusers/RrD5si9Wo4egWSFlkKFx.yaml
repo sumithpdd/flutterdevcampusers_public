@@ -17,7 +17,6 @@ is_fav: null
 isWinner: null
 phone: null
 name: 'Danai Korre'
-id: '1'
 email: null
 timestamp:
     _nanoseconds: 37000000

@@ -16,7 +16,6 @@ is_fav: null
 isWinner: null
 phone: null
 name: 'Yumi Kobayashi '
-id: '10'
 email: null
 timestamp:
     _nanoseconds: 48000000

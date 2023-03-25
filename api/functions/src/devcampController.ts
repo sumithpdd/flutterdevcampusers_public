@@ -2,6 +2,7 @@ import { Response } from "express";
 import { db } from "./config/firebase";
 
 type DevCampUser = {
+  id: String;
   email: string;
   name: string;
   profileImageUrl: String;
@@ -52,7 +53,6 @@ const addDevCampUser = async (req: Request, res: Response) => {
   try {
     const devcampuser = db.collection("devcampuser").doc();
     const devcampuserObject = {
-      id: devcampuser.id,
       email: email,
       name: name,
       slackId: slackId,
@@ -84,7 +84,13 @@ const getAllDevCampUsers = async (req: Request, res: Response) => {
   try {
     const allDevCampUsers: DevCampUser[] = [];
     const querySnapshot = await db.collection("devcampusers").get();
-    querySnapshot.forEach((doc: any) => allDevCampUsers.push(doc.data()));
+    querySnapshot.forEach((doc: any) => {
+      allDevCampUsers.push({
+        id: doc.id,
+        ...doc.data(),
+      });
+    });
+
     return res.status(200).json(allDevCampUsers);
   } catch (error) {
     return res.status(500).json(error.message);
@@ -100,7 +106,7 @@ const getDevCampUserByNameParam = async (req: Request, res: Response) => {
   if (email) {
     return getDevCampUserByName("email", email, res);
   }
-  return res.status(200).json({ message: "incorrect QS." });
+  return res.status(200).json({ message: "incorrect Params." });
 };
 const getDevCampUserByNameQueryString = async (req: Request, res: Response) => {
   const {
@@ -134,7 +140,12 @@ async function getDevCampUserByName(
     if (snapshot.empty) {
       return res.status(200).json({ message: "No matching documents." });
     }
-    snapshot.forEach((doc: any) => allDevCampUsers.push(doc.data()));
+    snapshot.forEach((doc: any) => {
+      allDevCampUsers.push({
+        id: doc.id,
+        ...doc.data(),
+      });
+    });
 
     return res.status(200).json(allDevCampUsers);
   } catch (error) {
@@ -167,7 +178,6 @@ const updateDevCampUser = async (req: Request, res: Response) => {
     const currentData = (await devcampuser.get()).data() || {};
 
     const devcampuserObject = {
-      id: currentData.id,
       email: email || currentData.email,
       name: name || currentData.name,
       slackId: slackId || currentData.slackId,
@@ -185,7 +195,7 @@ const updateDevCampUser = async (req: Request, res: Response) => {
       whybootcamp: whybootcamp || currentData.itexperience,
     };
 
-    await devcampuser.set(devcampuserObject).catch((error) => {
+    await devcampuser.update(devcampuserObject).catch((error) => {
       return res.status(400).json({
         status: "error",
         message: error.message,

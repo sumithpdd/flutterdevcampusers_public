@@ -18,7 +18,6 @@ is_fav: null
 isWinner: true
 phone: null
 name: 'Monica Martin'
-id: '29'
 email: null
 timestamp:
     _nanoseconds: 42000000

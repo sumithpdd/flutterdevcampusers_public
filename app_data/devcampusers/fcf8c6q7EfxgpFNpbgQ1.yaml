@@ -16,7 +16,6 @@ is_fav: null
 isWinner: true
 phone: null
 name: 'Bettina Carrizo'
-id: '31'
 email: null
 timestamp:
     _nanoseconds: 35000000
