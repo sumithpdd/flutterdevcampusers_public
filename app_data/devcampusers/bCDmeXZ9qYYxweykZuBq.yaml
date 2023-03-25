@@ -12,16 +12,24 @@ address:
     city: null
     street: null
 session2: '0'
-userStatus: accepted
 displayName: null
 is_fav: null
 isWinner: null
 phone: null
 name: 'Preethy Ani Jose'
 id: '62'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 45000000
     _seconds: 1679333023
 session1: '1'
+confirmedOn:
+    _seconds: 1679473695
+    _nanoseconds: 992000000
+acceptedOn:
+    _seconds: 1679473455
+    _nanoseconds: 730000000
+userStatus: confirmed
+rating: 3.5
+bio: ""
+profileImageUrl: ""

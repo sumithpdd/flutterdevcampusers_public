@@ -11,17 +11,25 @@ address:
     city: null
     street: null
 session2: '0'
-userStatus: accepted
 displayName: null
 is_fav: null
 isWinner: null
 phone: null
 name: 'Parul Rajoriya'
 id: '52'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 44000000
     _seconds: 1679333023
 session1: '1'
 session3: '1'
+confirmedOn:
+    _seconds: 1679473687
+    _nanoseconds: 824000000
+acceptedOn:
+    _seconds: 1679473455
+    _nanoseconds: 728000000
+userStatus: confirmed
+rating: 3.5
+bio: ""
+profileImageUrl: ""

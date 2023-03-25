@@ -12,7 +12,6 @@ address:
     city: null
     street: null
 session2: '1'
-userStatus: accepted
 session1: '0'
 displayName: null
 is_fav: null
@@ -20,8 +19,17 @@ isWinner: null
 phone: null
 name: 'Moyinoluwa Shabi'
 id: '76'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 42000000
     _seconds: 1679333023
+confirmedOn:
+    _seconds: 1679473661
+    _nanoseconds: 252000000
+acceptedOn:
+    _seconds: 1679473455
+    _nanoseconds: 727000000
+userStatus: confirmed
+rating: 3.5
+bio: ""
+profileImageUrl: ""

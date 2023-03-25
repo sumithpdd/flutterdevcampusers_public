@@ -11,7 +11,6 @@ address:
     city: null
     street: null
 session2: '1'
-userStatus: accepted
 session1: '1'
 displayName: null
 is_fav: null
@@ -19,9 +18,18 @@ isWinner: null
 phone: null
 name: 'Danai Korre'
 id: '1'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 37000000
     _seconds: 1679333023
 session4: '1'
+confirmedOn:
+    _seconds: 1679473604
+    _nanoseconds: 348000000
+acceptedOn:
+    _seconds: 1679473455
+    _nanoseconds: 729000000
+userStatus: confirmed
+rating: 3.5
+bio: ""
+profileImageUrl: ""

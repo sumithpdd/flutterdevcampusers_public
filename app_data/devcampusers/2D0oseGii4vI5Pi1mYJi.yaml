@@ -10,7 +10,6 @@ address:
     suite: null
     city: null
     street: null
-userStatus: accepted
 session2: '1'
 session1: '1'
 displayName: null
@@ -19,9 +18,18 @@ isWinner: null
 phone: null
 name: 'Ariba Hussain'
 id: '22'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 33000000
     _seconds: 1679333023
 session4: '1'
+confirmedOn:
+    _seconds: 1679473333
+    _nanoseconds: 617000000
+acceptedOn:
+    _seconds: 1679473050
+    _nanoseconds: 535000000
+userStatus: confirmed
+rating: 3.5
+bio: ""
+profileImageUrl: ""

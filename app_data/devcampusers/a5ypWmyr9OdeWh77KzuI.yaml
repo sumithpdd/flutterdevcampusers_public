@@ -20,8 +20,16 @@ isWinner: null
 phone: null
 name: ' nishth asaraswat2'
 id: '78'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 26000000
     _seconds: 1679333023
+confirmedOn:
+    _seconds: 1679473050
+    _nanoseconds: 536000000
+acceptedOn:
+    _seconds: 1679473050
+    _nanoseconds: 536000000
+rating: 3.5
+bio: ""
+profileImageUrl: ""

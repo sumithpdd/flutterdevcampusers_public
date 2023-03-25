@@ -9,7 +9,6 @@ address:
     suite: null
     city: null
     street: null
-userStatus: accepted
 session2: '1'
 session1: '0'
 displayName: null
@@ -18,10 +17,19 @@ isWinner: true
 phone: null
 name: 'Bettina Carrizo'
 id: '31'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 35000000
     _seconds: 1679333023
 session3: '1'
 session4: '1'
+confirmedOn:
+    _seconds: 1679473587
+    _nanoseconds: 899000000
+acceptedOn:
+    _seconds: 1679473455
+    _nanoseconds: 730000000
+userStatus: confirmed
+rating: 3.5
+bio: ""
+profileImageUrl: ""

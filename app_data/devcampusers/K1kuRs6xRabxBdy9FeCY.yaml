@@ -12,16 +12,24 @@ address:
     city: null
     street: null
 session2: '1'
-userStatus: accepted
 displayName: null
 is_fav: null
 isWinner: null
 phone: null
 name: 'Liana Hayrapetyan'
 id: '75'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 40000000
     _seconds: 1679333023
 session1: '1'
+confirmedOn:
+    _seconds: 1679473638
+    _nanoseconds: 797000000
+acceptedOn:
+    _seconds: 1679473455
+    _nanoseconds: 728000000
+userStatus: confirmed
+rating: 3.5
+bio: ""
+profileImageUrl: ""

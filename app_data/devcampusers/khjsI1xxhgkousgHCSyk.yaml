@@ -20,8 +20,16 @@ isWinner: null
 phone: null
 name: 'Alcia Moncrieffe'
 id: '24'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 30000000
     _seconds: 1679333023
+confirmedOn:
+    _seconds: 1679473050
+    _nanoseconds: 537000000
+acceptedOn:
+    _seconds: 1679473050
+    _nanoseconds: 537000000
+rating: 3.5
+bio: ""
+profileImageUrl: ""

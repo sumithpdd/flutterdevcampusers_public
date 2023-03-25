@@ -10,14 +10,12 @@ address:
     suite: null
     city: null
     street: null
-userStatus: accepted
 displayName: null
 is_fav: null
 isWinner: null
 phone: null
 name: 'Tibor Ormosi'
 id: '69'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 48000000
@@ -25,3 +23,13 @@ timestamp:
 session1: '1'
 session2: '1'
 session3: '1'
+confirmedOn:
+    _seconds: 1679473731
+    _nanoseconds: 780000000
+acceptedOn:
+    _seconds: 1679473455
+    _nanoseconds: 729000000
+userStatus: confirmed
+rating: 3.5
+bio: ""
+profileImageUrl: ""

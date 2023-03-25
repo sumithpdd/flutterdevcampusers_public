@@ -12,7 +12,6 @@ address:
     city: null
     street: null
 session2: '1'
-userStatus: accepted
 session1: '1'
 displayName: null
 is_fav: null
@@ -20,8 +19,17 @@ isWinner: null
 phone: null
 name: 'NIHARIKA CHINTHA'
 id: '61'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 43000000
     _seconds: 1679333023
+acceptedOn:
+    _seconds: 1679473455
+    _nanoseconds: 730000000
+userStatus: confirmed
+rating: 3.5
+bio: ""
+profileImageUrl: ""
+confirmedOn:
+    _seconds: 1679473680
+    _nanoseconds: 657000000
