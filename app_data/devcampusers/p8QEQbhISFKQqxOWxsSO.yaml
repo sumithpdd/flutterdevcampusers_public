@@ -11,7 +11,6 @@ address:
     city: null
     street: null
 session2: '1'
-userStatus: accepted
 session1: '0'
 displayName: null
 is_fav: null
@@ -19,9 +18,18 @@ isWinner: null
 phone: null
 name: Heba
 id: '72'
-profileImageUrl: null
 email: null
 timestamp:
     _nanoseconds: 39000000
     _seconds: 1679333023
 session4: '1'
+confirmedOn:
+    _seconds: 1679740553
+    _nanoseconds: 678000000
+acceptedOn:
+    _seconds: 1679738661
+    _nanoseconds: 547000000
+userStatus: confirmed
+rating: 3.5
+bio: ""
+profileImageUrl: ""
