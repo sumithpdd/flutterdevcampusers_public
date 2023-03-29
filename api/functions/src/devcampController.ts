@@ -129,7 +129,7 @@ async function getDevCampUserByName(
   try {
     const allDevCampUsers: DevCampUser[] = [];
     // name = name.toLowerCase();
-    console.log("value : " + value);
+    console.log("searchby : " + searchby + " value : " + value);
     const snapshot = await db
       .collection("devcampusers")
       .orderBy(searchby)
@@ -164,8 +164,7 @@ const updateDevCampUser = async (req: Request, res: Response) => {
       githubuserid,
       assignment1link,
       assignment2link,
-      assignment3link,
-      address: { country: country },
+      assignment3link, 
       flutterlevel,
       itexperience,
       whybootcamp,
@@ -174,6 +173,8 @@ const updateDevCampUser = async (req: Request, res: Response) => {
   } = req;
 
   try {
+    console.log("devcampuserId : " + devcampuserId);
+   
     const devcampuser = db.collection("devcampusers").doc(devcampuserId);
     const currentData = (await devcampuser.get()).data() || {};
 
@@ -187,12 +188,12 @@ const updateDevCampUser = async (req: Request, res: Response) => {
       assignment1link: assignment1link || currentData.assignment1link,
       assignment2link: assignment2link || currentData.assignment2link,
       assignment3link: assignment3link || currentData.assignment3link,
-      address: {
-        country: country || currentData.country,
-      },
+      // address: {
+      //   country: country || currentData.country,
+      // },
       flutterlevel: flutterlevel || currentData.flutterlevel,
-      itexperience: itexperience || currentData.name,
-      whybootcamp: whybootcamp || currentData.itexperience,
+      itexperience: itexperience || currentData.itexperience,
+      whybootcamp: whybootcamp || currentData.whybootcamp,
     };
 
     await devcampuser.update(devcampuserObject).catch((error) => {

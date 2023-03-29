@@ -131,6 +131,8 @@ class _ViewAttendanceAllScreenState extends State<ViewAttendanceAllScreen> {
             "SESSION 2",
             "SESSION 3",
             "SESSION 4",
+            "SESSION 5",
+            "SESSION 6",
             " Actions"
           ]),
           rows: _searchList!.map((user) => generateRows(user)).toList(),
@@ -172,6 +174,14 @@ class _ViewAttendanceAllScreenState extends State<ViewAttendanceAllScreen> {
       AttendanceCell(
         user: devcampuser,
         propertyName: "session4",
+      ).generateCells(),
+      AttendanceCell(
+        user: devcampuser,
+        propertyName: "session5",
+      ).generateCells(),
+      AttendanceCell(
+        user: devcampuser,
+        propertyName: "session6",
       ).generateCells(),
       AttendanceCell(
         user: devcampuser,

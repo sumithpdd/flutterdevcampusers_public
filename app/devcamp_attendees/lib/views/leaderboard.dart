@@ -1,14 +1,17 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, prefer_const_constructors
 
+import 'package:devcamp_attendees/widgets/wheel.dart';
 import 'package:flutter/material.dart';
 
 import '../models/dev_camp_user.dart';
 
 class LeaderBoard extends StatelessWidget {
   List<DevCampUser> listWinners;
+  List<DevCampUser> gameUsers;
   LeaderBoard({
     Key? key,
     required this.listWinners,
+    required this.gameUsers,
   }) : super(key: key);
 
   int i = 0;
@@ -21,37 +24,37 @@ class LeaderBoard extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Scaffold(
-            body: Container(
-          margin: const EdgeInsets.only(top: 65.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Container(
-                margin: const EdgeInsets.only(left: 15.0, top: 10.0),
-                child: RichText(
-                    text: const TextSpan(
-                        text: "Leader",
-                        style: TextStyle(
-                            color: Colors.deepPurple,
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.bold),
-                        children: [
-                      TextSpan(
-                          text: " Board",
+          body: Container(
+            margin: const EdgeInsets.only(top: 65.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  margin: const EdgeInsets.only(left: 15.0, top: 10.0),
+                  child: RichText(
+                      text: const TextSpan(
+                          text: "Leader",
                           style: TextStyle(
-                              color: Colors.pink,
+                              color: Colors.deepPurple,
                               fontSize: 30.0,
-                              fontWeight: FontWeight.bold))
-                    ])),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(left: 15.0),
-                child: Text(
-                  'Global Rank Board: ',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold),
+                          children: [
+                        TextSpan(
+                            text: " Board",
+                            style: TextStyle(
+                                color: Colors.pink,
+                                fontSize: 30.0,
+                                fontWeight: FontWeight.bold))
+                      ])),
                 ),
-              ),
-              Flexible(
+                const Padding(
+                  padding: EdgeInsets.only(left: 15.0),
+                  child: Text(
+                    'Flutter DevCamp Winner Board: ',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Flexible(
                   child: ListView.builder(
                       itemCount: listWinners.length,
                       itemBuilder: (context, index) {
@@ -153,10 +156,13 @@ class LeaderBoard extends StatelessWidget {
                         //     child: CircularProgressIndicator(),
                         //   );
                         // }
-                      }))
-            ],
+                      }),
+                ),
+                Flexible(child: WhellFortune(gameUsers: gameUsers))
+              ],
+            ),
           ),
-        )),
+        ),
       ],
     );
   }

@@ -1,6 +1,7 @@
 import 'package:devcamp_attendees/views/leaderboard.dart';
 import 'package:devcamp_attendees/views/map_screen.dart';
 import 'package:devcamp_attendees/views/view_all_attendance.dart';
+import 'package:devcamp_attendees/views/view_all_attendees.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -24,12 +25,13 @@ class Home extends StatelessWidget {
                 IconButton(
                   onPressed: () {
                     controller.getWinners();
+                    controller.getAcceptedUsersForGame();
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => LeaderBoard(
-                          listWinners: controller.listWinners,
-                        ),
+                            listWinners: controller.listWinners,
+                            gameUsers: controller.listGameUsers),
                       ),
                     );
                   },
@@ -41,7 +43,7 @@ class Home extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ViewAttendanceAllScreen(
+                        builder: (context) => ViewAllAttendeesScreen(
                           devcampusers: controller.listAcceptedUsers,
                         ),
                       ),

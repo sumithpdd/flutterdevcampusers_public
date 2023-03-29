@@ -9,6 +9,7 @@ class HomeController extends GetxController {
   var listUsers = <DevCampUser>[];
   var listWinners = <DevCampUser>[];
   var listAcceptedUsers = <DevCampUser>[];
+  var listGameUsers = <DevCampUser>[];
   var isFavOnly = false;
 
   @override
@@ -76,6 +77,21 @@ class HomeController extends GetxController {
         //     (user) => user.userStatus != null && user.userStatus == "accepted")
         .toList();
     listAcceptedUsers.sort((usera, userb) =>
+        usera.name!.toLowerCase().compareTo(userb.name!.toLowerCase()));
+
+    update();
+  }
+
+  getAcceptedUsersForGame() {
+    listGameUsers.clear();
+
+    listGameUsers = listUsers
+        .where((user) =>
+            user.userStatus != null &&
+            user.userStatus == "confirmed" &&
+            !user.isWinner!)
+        .toList();
+    listGameUsers.sort((usera, userb) =>
         usera.name!.toLowerCase().compareTo(userb.name!.toLowerCase()));
 
     update();

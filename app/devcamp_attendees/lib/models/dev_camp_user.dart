@@ -1,34 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DevCampUser {
-  String? id;
-  String? name;
-  String? displayName;
-  String? email;
-  String? bio;
-  Address? address;
-  String? phone;
-  String? website;
-  Company? company;
-  bool? isFav = false;
-
-  String? userStatus;
-  bool? isWinner = false;
-  String? profileImageUrl;
-  String? winText;
-  String? session1;
-  String? session2;
-  String? session3;
-  String? session4;
-
-  final Timestamp? timestamp = Timestamp.fromDate(DateTime.now());
-
-  double? rating;
-
-  Timestamp? acceptedOn;
-  Timestamp? confirmedOn;
-
-  String? feedback;
   DevCampUser(
       {this.id,
       this.name,
@@ -51,8 +23,40 @@ class DevCampUser {
       this.session2,
       this.session3,
       this.session4,
+      this.session5,
+      this.session6,
+      this.assignment1link,
+      this.assignment2link,
+      this.assignment3link,
+      this.githubuserid,
+      this.linkedInhandle,
+      this.slackId,
+      this.twitterhandle,
+      this.itexperience,
       this.feedback});
+  String? id;
+  String? name;
+  String? displayName;
+  String? email;
+  String? bio;
+  Address? address;
+  String? phone;
+  Company? company;
+  bool? isFav = false;
+  bool? isWinner = false;
+  String? profileImageUrl;
+  bool? session1, session2, session3, session4, session5, session6 = false;
+  String? assignment1link, assignment2link, assignment3link = "";
+  String? githubuserid, linkedInhandle, slackId, twitterhandle = "0";
+  String? userStatus;
+  String? website;
+  String? itexperience = "0";
+  String? winText;
 
+  double? rating;
+  Timestamp? acceptedOn, confirmedOn;
+  String? feedback;
+  final Timestamp? timestamp = Timestamp.fromDate(DateTime.now());
   DevCampUser.fromJson(Map<String, dynamic> json) {
     id = json['id'].toString();
     name = json['name'];
@@ -72,10 +76,20 @@ class DevCampUser {
     rating = json['rating'];
     winText = json['winText'];
     profileImageUrl = json['profileImageUrl'];
-    session1 = json['session1'];
-    session2 = json['session2'];
-    session3 = json['session3'];
-    session4 = json['session4'];
+    session1 = json['session1'] ?? false;
+    session2 = json['session2'] ?? false;
+    session3 = json['session3'] ?? false;
+    session4 = json['session4'] ?? false;
+    session5 = json['session5'] ?? false;
+    session6 = json['session6'] ?? false;
+    assignment1link = json['assignment1link'];
+    assignment2link = json['assignment2link'];
+    assignment3link = json['assignment3link'];
+    githubuserid = json['githubuserid'];
+    linkedInhandle = json['linkedInhandle'];
+    slackId = json['slackId'];
+    twitterhandle = json['twitterhandle'];
+    itexperience = json['itexperience'];
   }
 
   Map<String, dynamic> toJson() {
@@ -102,6 +116,17 @@ class DevCampUser {
     data['session2'] = session2;
     data['session3'] = session3;
     data['session4'] = session4;
+    data['session5'] = session5;
+    data['session6'] = session6;
+
+    data['assignment1link'] = assignment1link;
+    data['assignment2link'] = assignment2link;
+    data['assignment3link'] = assignment3link;
+    data['githubuserid'] = githubuserid;
+    data['linkedInhandle'] = linkedInhandle;
+    data['slackId'] = slackId;
+    data['twitterhandle'] = twitterhandle;
+    data['itexperience'] = itexperience;
     data['timestamp'] = Timestamp.fromDate(DateTime.now());
     return data;
   }
@@ -110,30 +135,39 @@ class DevCampUser {
     final dynamic data = doc.data();
 
     return DevCampUser(
-      id: doc.id,
-      name: data['name'],
-      profileImageUrl: data['profileImageUrl'],
-      email: data['email'],
-      bio: data['bio'] ?? "",
-      displayName: data['displayname'] ?? "",
-      address:
-          data['address'] != null ? Address.fromDoc(data['address']) : null,
-      phone: data['phone'] ?? "",
-      website: data['website'] ?? "",
-      company:
-          data['company'] != null ? Company.fromDoc(data['company']) : null,
-      isFav: data['is_fav'] ?? false,
-      isWinner: data['isWinner'] ?? false,
-      userStatus: data['userStatus'] ?? "",
-      acceptedOn: data['acceptedOn'] ?? Timestamp.fromDate(DateTime.now()),
-      confirmedOn: data['confirmedOn'] ?? Timestamp.fromDate(DateTime.now()),
-      rating: data['rating'] ?? 2,
-      winText: data['winText'] ?? "",
-      session1: data['session1'] ?? "",
-      session2: data['session2'] ?? "",
-      session3: data['session3'] ?? "",
-      session4: data['session4'] ?? "",
-    );
+        id: doc.id,
+        name: data['name'],
+        profileImageUrl: data['profileImageUrl'],
+        email: data['email'],
+        bio: data['bio'] ?? "",
+        displayName: data['displayname'] ?? "",
+        address:
+            data['address'] != null ? Address.fromDoc(data['address']) : null,
+        phone: data['phone'] ?? "",
+        website: data['website'] ?? "",
+        company:
+            data['company'] != null ? Company.fromDoc(data['company']) : null,
+        isFav: data['is_fav'] ?? false,
+        isWinner: data['isWinner'] ?? false,
+        userStatus: data['userStatus'] ?? "",
+        acceptedOn: data['acceptedOn'] ?? Timestamp.fromDate(DateTime.now()),
+        confirmedOn: data['confirmedOn'] ?? Timestamp.fromDate(DateTime.now()),
+        rating: data['rating'] ?? 2,
+        winText: data['winText'] ?? "",
+        session1: data['session1'] ?? false,
+        session2: data['session2'] ?? false,
+        session3: data['session3'] ?? false,
+        session4: data['session4'] ?? false,
+        session5: data['session5'] ?? false,
+        session6: data['session6'] ?? false,
+        assignment1link: data['assignment1link'],
+        assignment2link: data['assignment2link'],
+        assignment3link: data['assignment3link'],
+        githubuserid: data['githubuserid'],
+        linkedInhandle: data['linkedInhandle'],
+        slackId: data['slackId'],
+        twitterhandle: data['twitterhandle'],
+        itexperience: data['itexperience']);
   }
   Map<String, dynamic> toMap() {
     return {
@@ -153,6 +187,16 @@ class DevCampUser {
       'session2': session2,
       'session3': session3,
       'session4': session4,
+      'session5': session5,
+      'session6': session6,
+      'assignment1link': assignment1link,
+      'assignment2link': assignment2link,
+      'assignment3link': assignment3link,
+      'githubuserid': githubuserid,
+      'linkedInhandle': linkedInhandle,
+      'slackId': slackId,
+      'twitterhandle': twitterhandle,
+      'itexperience': itexperience,
       'timestamp': Timestamp.fromDate(DateTime.now())
     };
   }
