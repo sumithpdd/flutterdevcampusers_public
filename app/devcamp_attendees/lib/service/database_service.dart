@@ -82,6 +82,13 @@ class DatabaseService {
     });
   }
 
+  void updateUserJson(
+    String id,
+    Map<String, dynamic>? json,
+  ) async {
+    usersRef.doc(id).update(json!);
+  }
+
   Future<void> deleteUser(String userId) async {
     var snapshot = usersRef.doc(userId);
 

@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:change_case/change_case.dart';
+import 'package:devcamp_attendees/service/database_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -27,8 +28,8 @@ class _ModifyUserState extends State<ModifyUser> {
   bool showSegmentedControl = true;
   final _formKey = GlobalKey<FormBuilderState>();
   bool _nameHasError = false;
-  bool _winTextHasError = false;
   bool _emailHasError = false;
+  var winTextOptions = ['Flutter Book Code', 'Jetbrains License', ''];
 
   void _onChanged(dynamic val) => debugPrint(val.toString());
   _buildTextField(
@@ -55,7 +56,7 @@ class _ModifyUserState extends State<ModifyUser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Form Builder Example')),
+      appBar: AppBar(title: const Text('Edit Attendee Info')),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
@@ -98,27 +99,27 @@ class _ModifyUserState extends State<ModifyUser> {
                           child: FormBuilderSwitch(
                             title: const Text('Is Winner'),
                             name: 'isWinner',
-                            initialValue: true,
                             onChanged: _onChanged,
                           ),
                         ),
                         Flexible(
-                          child: _buildTextField(
-                            name: "winText",
-                            hasError: _winTextHasError,
-                            onChanged: (val) {
-                              setState(() {
-                                _winTextHasError = !(_formKey
-                                        .currentState?.fields['winText']
-                                        ?.validate() ??
-                                    false);
-                              });
-                            },
-                            validator: FormBuilderValidators.compose(
-                              [
-                                FormBuilderValidators.max(70),
-                              ],
+                          child: FormBuilderDropdown<String>(
+                            // autovalidate: true,
+                            name: 'winText',
+                            decoration: const InputDecoration(
+                              labelText: 'Win Text',
+                              hintText: 'Select Win Text',
                             ),
+
+                            items: winTextOptions
+                                .map((winText) => DropdownMenuItem(
+                                      alignment: AlignmentDirectional.center,
+                                      value: winText,
+                                      child: Text(winText),
+                                    ))
+                                .toList(),
+
+                            valueTransformer: (val) => val?.toString(),
                           ),
                         ),
                       ],
@@ -178,19 +179,19 @@ class _ModifyUserState extends State<ModifyUser> {
                       decoration:
                           const InputDecoration(labelText: 'User Status'),
                       name: 'userStatus',
+                      selectedColor: Colors.green,
                       options: const [
                         FormBuilderChipOption(
                           value: 'accepted',
-                          avatar: Icon(Icons.check_box, color: Colors.grey),
+                          avatar: Icon(Icons.check_box),
                         ),
                         FormBuilderChipOption(
                           value: 'confirmed',
-                          avatar: Icon(Icons.badge, color: Colors.green),
+                          avatar: Icon(Icons.badge),
                         ),
                         FormBuilderChipOption(
                           value: 'certified',
-                          avatar: Icon(FontAwesomeIcons.userGraduate,
-                              color: Colors.blue),
+                          avatar: Icon(FontAwesomeIcons.userGraduate),
                         ),
                       ],
                       onChanged: _onChanged,
@@ -273,6 +274,9 @@ class _ModifyUserState extends State<ModifyUser> {
                       onPressed: () {
                         if (_formKey.currentState?.saveAndValidate() ?? false) {
                           debugPrint(_formKey.currentState?.value.toString());
+                          DatabaseService().updateUserJson(
+                              widget.devCampUser.id!,
+                              _formKey.currentState?.value);
                         } else {
                           debugPrint(_formKey.currentState?.value.toString());
                           debugPrint('validation failed');

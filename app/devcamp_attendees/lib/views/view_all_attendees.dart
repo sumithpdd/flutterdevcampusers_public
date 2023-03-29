@@ -217,12 +217,10 @@ class AttendeeDataSource extends DataGridSource {
         .toList();
   }
 
-  Widget getAttendanceWidget(String data) {
-    return (data == '1')
+  Widget getAttendanceWidget(bool data) {
+    return (data)
         ? Icon(FontAwesomeIcons.toggleOn, color: Colors.green)
-        : (data == '0')
-            ? Icon(FontAwesomeIcons.toggleOff, color: Colors.red)
-            : Text(data);
+        : Icon(FontAwesomeIcons.toggleOff, color: Colors.red);
   }
 
   Widget getUserStatusWidget(String data) {
@@ -251,7 +249,7 @@ class AttendeeDataSource extends DataGridSource {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
       if (dataGridCell.columnName.toString().startsWith("session")) {
-        return getAttendanceWidget(dataGridCell.value.toString());
+        return getAttendanceWidget(dataGridCell.value);
       }
       if (dataGridCell.columnName.toString().startsWith("Actions")) {
         return actionCell(dataGridCell.value);
