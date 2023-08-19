@@ -1,12 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../constants/constants.dart';
-import 'login_page.dart';
 
 class MainScreenPage extends StatelessWidget {
   const MainScreenPage({Key? key}) : super(key: key);
@@ -35,7 +32,7 @@ class MainScreenPage extends StatelessWidget {
             ),
           ],
         ),
-        actions: [
+        actions: const [
           // (authUser != null)
           //     ? StreamBuilder<QuerySnapshot>(
           //         stream: userCollectionReference.snapshots(),
@@ -119,7 +116,7 @@ class MainScreenPage extends StatelessWidget {
       //   backgroundColor: Colors.redAccent,
       // ),
       body: Column(
-        children: [
+        children: const [
           // Container(
           //   margin: const EdgeInsets.only(top: 12, left: 12, bottom: 10),
           //   width: double.infinity,

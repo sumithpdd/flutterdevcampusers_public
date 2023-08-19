@@ -12,7 +12,7 @@ class Nav {
         pageBuilder: (c, a1, a2) => screen,
         transitionsBuilder: (c, anim, a2, child) =>
             FadeTransition(opacity: anim, child: child),
-        transitionDuration: Duration(milliseconds: 280),
+        transitionDuration: const Duration(milliseconds: 280),
       ),
     );
   }

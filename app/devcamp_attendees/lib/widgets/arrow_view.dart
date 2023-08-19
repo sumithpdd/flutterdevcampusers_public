@@ -32,14 +32,14 @@ class ArrowView extends StatelessWidget {
 class _ArrowClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    Path _path = Path();
-    Offset _center = size.center(Offset.zero);
-    _path.lineTo(_center.dx, size.height);
-    _path.lineTo(size.width, 0);
-    _path.lineTo(_center.dx, _center.dy);
-    _path.close();
+    Path path = Path();
+    Offset center = size.center(Offset.zero);
+    path.lineTo(center.dx, size.height);
+    path.lineTo(size.width, 0);
+    path.lineTo(center.dx, center.dy);
+    path.close();
     print("bitti");
-    return _path;
+    return path;
   }
 
   @override

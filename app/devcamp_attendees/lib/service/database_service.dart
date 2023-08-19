@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:devcamp_attendees/models/dev_camp_mentor.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../models/dev_camp_user.dart';
@@ -56,7 +57,7 @@ class DatabaseService {
   }
 
   void updateUserAttendance(
-      DevCampUser user, String session, String value) async {
+      DevCampUser user, String session, bool value) async {
     usersRef.doc(user.id).update({
       session: value,
     });
@@ -98,6 +99,37 @@ class DatabaseService {
 
     return batch.commit();
   }
+
+  Future<DevCampMentor> getMentor(String mentorId) async {
+    DocumentSnapshot mentorDoc = await mentorsRef.doc(mentorId).get();
+    return DevCampMentor.fromDoc(mentorDoc);
+  }
+
+  Future<List<DevCampMentor>> getAllMentors() async {
+    QuerySnapshot mentorSnapshot = await mentorsRef.get();
+    List<DevCampMentor> mentors = [];
+    for (var doc in mentorSnapshot.docs) {
+      DevCampMentor mentor = DevCampMentor.fromDoc(doc);
+      mentors.add(mentor);
+    }
+    return mentors;
+  }
+
+  Future<List<String>> saveMentors(List<DevCampUser> mentors) async {
+    List<String> ids = [];
+    for (var mentor in mentors) {
+      mentorsRef.add(mentor.toJson()).then((doc) => ids.add(doc.id));
+    }
+    return ids;
+  }
+
+  void updateMentorJson(
+    String id,
+    Map<String, dynamic>? json,
+  ) async {
+    mentorsRef.doc(id).update(json!);
+  }
+
   // void insertbookmarkedEvent(String userId, String eventId) async {
   //   final documentReference =
   //       usersRef.doc(userId).collection("bookmarkedEvents").doc();

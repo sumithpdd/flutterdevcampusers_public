@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../screens/main_screen.dart';
 import 'input_decoration.dart';
 
 class LoginForm extends StatelessWidget {
@@ -15,7 +14,7 @@ class LoginForm extends StatelessWidget {
   final TextEditingController passwordTextController;
   @override
   Widget build(BuildContext context) {
-    GlobalKey _scaffold = GlobalKey();
+    GlobalKey scaffold = GlobalKey();
     return Form(
       key: formKey,
       child: Column(children: [
@@ -45,7 +44,6 @@ class LoginForm extends StatelessWidget {
           height: 20,
         ),
         TextButton(
-            child: const Text('Sign In'),
             style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.all(15),
@@ -78,7 +76,8 @@ class LoginForm extends StatelessWidget {
                 //   );
                 // });
               }
-            })
+            },
+            child: const Text('Sign In'))
       ]),
     );
   }

@@ -31,14 +31,15 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
 
   @override
   Widget build(BuildContext context) {
+    DevCampUser devCampUser = widget.devcampusers;
     TextEditingController nameTextController =
-        TextEditingController(text: widget.devcampusers.name);
+        TextEditingController(text: devCampUser.name);
     TextEditingController bioTextController =
-        TextEditingController(text: widget.devcampusers.bio);
+        TextEditingController(text: devCampUser.bio);
     TextEditingController photoTextController =
-        TextEditingController(text: widget.devcampusers.profileImageUrl);
+        TextEditingController(text: devCampUser.profileImageUrl);
     TextEditingController feedbackTextController =
-        TextEditingController(text: widget.devcampusers.feedback);
+        TextEditingController(text: devCampUser.feedback);
 
     return AlertDialog(
       title: Column(
@@ -49,9 +50,9 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
               CircleAvatar(
                 backgroundColor: Colors.transparent,
                 backgroundImage: NetworkImage(
-                    widget.devcampusers.profileImageUrl == null
+                    devCampUser.profileImageUrl == null
                         ? 'https://i.pravatar.cc/300'
-                        : widget.devcampusers.profileImageUrl!),
+                        : devCampUser.profileImageUrl!),
                 radius: 50,
               ),
               const Spacer(),
@@ -64,7 +65,7 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
               )
             ],
           ),
-          Text(widget.devcampusers.bio!)
+          Text(devCampUser.bio == null ? '' : devCampUser.bio!)
         ],
       ),
       content: Form(
@@ -111,7 +112,7 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
                     });
                   },
                   icon: const Icon(Icons.bookmark_outline_sharp),
-                  label: (widget.devcampusers.userStatus == null)
+                  label: (devCampUser.userStatus == null)
                       ? (!acceptedClicked)
                           ? const Text('Accept')
                           : Text(
@@ -119,7 +120,7 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
                               style: TextStyle(color: Colors.blueGrey.shade300),
                             )
                       : Text(
-                          'Accepted on: ${formatDate(widget.devcampusers.acceptedOn!)}')),
+                          'Accepted on: ${formatDate(devCampUser.acceptedOn == null ? devCampUser.nowTimestamp! : devCampUser.acceptedOn!)}')),
               TextButton.icon(
                   onPressed: () {
                     setState(() {
@@ -133,8 +134,8 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
                     });
                   },
                   icon: const Icon(Icons.done),
-                  label: (widget.devcampusers.userStatus != null &&
-                          widget.devcampusers.userStatus != "confirmed")
+                  label: (devCampUser.userStatus != null &&
+                          devCampUser.userStatus != "confirmed")
                       ? (!isConfirmedClicked)
                           ? const Text('Mark as Confirmed')
                           : const Text(
@@ -142,10 +143,10 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
                               style: TextStyle(color: Colors.grey),
                             )
                       : Text(
-                          'Confirmed on ${formatDate(widget.devcampusers.confirmedOn!)}')),
+                          'Confirmed on ${formatDate(devCampUser.confirmedOn == null ? devCampUser.nowTimestamp! : devCampUser.confirmedOn!)}')),
               RatingBar.builder(
                   allowHalfRating: true,
-                  initialRating: widget.devcampusers.rating ?? 4.5,
+                  initialRating: devCampUser.rating ?? 4.5,
                   itemCount: 5,
                   itemBuilder: (context, index) {
                     switch (index) {
@@ -201,19 +202,17 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
                     press: () {
                       // Only update if new data was entered
                       final userChangedName =
-                          widget.devcampusers.name != nameTextController.text;
+                          devCampUser.name != nameTextController.text;
                       final userChangedBio =
-                          widget.devcampusers.bio != bioTextController.text;
-                      final userChangedPhotoUrl =
-                          widget.devcampusers.profileImageUrl !=
-                              photoTextController.text;
+                          devCampUser.bio != bioTextController.text;
+                      final userChangedPhotoUrl = devCampUser.profileImageUrl !=
+                          photoTextController.text;
 
-                      final userChangedRating =
-                          widget.devcampusers.rating != _rating;
+                      final userChangedRating = devCampUser.rating != _rating;
                       final saveUserStatus =
                           (acceptedClicked || isConfirmedClicked)
                               ? userStatus
-                              : widget.devcampusers.userStatus;
+                              : devCampUser.userStatus;
                       final userUpdate = userChangedName ||
                           userChangedBio ||
                           userChangedRating ||
@@ -221,7 +220,7 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
                           userChangedBio;
                       if (userUpdate) {
                         DatabaseService().updateUser(
-                            widget.devcampusers.id!,
+                            devCampUser.id!,
                             nameTextController.text,
                             bioTextController.text,
                             photoTextController.text,
@@ -229,10 +228,10 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
                             saveUserStatus,
                             (acceptedClicked
                                 ? Timestamp.now()
-                                : widget.devcampusers.acceptedOn),
+                                : devCampUser.acceptedOn),
                             (isConfirmedClicked
                                 ? Timestamp.now()
-                                : widget.devcampusers.confirmedOn));
+                                : devCampUser.confirmedOn));
                       }
 
                       Navigator.of(context).pop();
@@ -253,9 +252,7 @@ class _UserDetailsDialogState extends State<UserDetailsDialog> {
                             actions: [
                               TextButton(
                                   onPressed: () {
-                                    usersRef
-                                        .doc(widget.devcampusers.id)
-                                        .delete();
+                                    usersRef.doc(devCampUser.id).delete();
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(

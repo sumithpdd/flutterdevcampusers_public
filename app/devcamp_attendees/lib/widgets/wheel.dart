@@ -4,8 +4,6 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 
 import '../models/dev_camp_user.dart';
 import '../models/luck.dart';
-import '../util/navigator.dart';
-import '../views/home.dart';
 import 'board_view.dart';
 
 class WhellFortune extends StatefulWidget {
@@ -37,16 +35,6 @@ class _WhellFortuneState extends State<WhellFortune>
   final List<Luck> _items = [];
 
   void _createList() {
-    // _items.addAll([
-    //   Luck("apple", _colors[Random().nextInt(_colors.length - 1)],
-    //       gameUsers[0].name!),
-    //   Luck("raspberry", _colors[Random().nextInt(_colors.length - 1)],
-    //       gameUsers[1].name!),
-    //   Luck("grapes", _colors[Random().nextInt(_colors.length - 1)],
-    //       gameUsers[2].name!),
-    //   Luck("fruit", _colors[Random().nextInt(_colors.length - 1)],
-    //       gameUsers[3].name!),
-    // ]);
     for (var user in gameUsers) {
       _items.add(Luck(
           "apple", _colors[Random().nextInt(_colors.length - 1)], user.name!));

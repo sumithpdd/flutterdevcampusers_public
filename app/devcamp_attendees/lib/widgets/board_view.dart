@@ -48,7 +48,7 @@ class _BoardViewState extends State<BoardView> {
             ],
           ),
         ),
-        Container(
+        SizedBox(
           height: size.height,
           width: size.width,
           child: ArrowView(),
@@ -58,12 +58,12 @@ class _BoardViewState extends State<BoardView> {
   }
 
   _buildCard(Luck luck) {
-    var _rotate = _rotote(widget.items.indexOf(luck));
-    var _angle = 2 * pi / widget.items.length;
+    var rotate = _rotote(widget.items.indexOf(luck));
+    var angle = 2 * pi / widget.items.length;
     return Transform.rotate(
-      angle: _rotate,
+      angle: rotate,
       child: ClipPath(
-        clipper: _LuckPath(_angle),
+        clipper: _LuckPath(angle),
         child: Container(
           height: size.height,
           width: size.width,
@@ -78,9 +78,9 @@ class _BoardViewState extends State<BoardView> {
   }
 
   _buildImage(Luck luck) {
-    var _rotate = _rotote(widget.items.indexOf(luck));
+    var rotate = _rotote(widget.items.indexOf(luck));
     return Transform.rotate(
-      angle: _rotate,
+      angle: rotate,
       child: Container(
         height: size.height,
         width: size.width,
@@ -115,14 +115,14 @@ class _LuckPath extends CustomClipper<Path> {
 
   @override
   Path getClip(Size size) {
-    Path _path = Path();
-    Offset _center = size.center(Offset.zero);
-    Rect _rect = Rect.fromCircle(center: _center, radius: size.width / 2);
-    _path.moveTo(_center.dx, _center.dy);
-    _path.arcTo(_rect, -pi / 2 - angle / 2, angle, false);
-    _path.close();
+    Path path = Path();
+    Offset center = size.center(Offset.zero);
+    Rect rect = Rect.fromCircle(center: center, radius: size.width / 2);
+    path.moveTo(center.dx, center.dy);
+    path.arcTo(rect, -pi / 2 - angle / 2, angle, false);
+    path.close();
 
-    return _path;
+    return path;
   }
 
   @override

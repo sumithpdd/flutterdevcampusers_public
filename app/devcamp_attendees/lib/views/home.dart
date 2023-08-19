@@ -2,6 +2,7 @@ import 'package:devcamp_attendees/views/leaderboard.dart';
 import 'package:devcamp_attendees/views/map_screen.dart';
 import 'package:devcamp_attendees/views/view_all_attendance.dart';
 import 'package:devcamp_attendees/views/view_all_attendees.dart';
+import 'package:devcamp_attendees/views/view_all_mentors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -43,13 +44,40 @@ class Home extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ViewAllAttendeesScreen(
+                        builder: (context) => ViewAttendanceAll(
                           devcampusers: controller.listAcceptedUsers,
                         ),
                       ),
                     );
                   },
                   icon: const Icon(Icons.show_chart),
+                ),
+                IconButton(
+                  onPressed: () {
+                    controller.getAcceptedUser();
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ViewAllAttendeesScreen(
+                          devcampusers: controller.listAcceptedUsers,
+                        ),
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.group_sharp),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ViewAllMentorScreen(
+                          devcampmentors: controller.listMentors,
+                        ),
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.school_outlined),
                 ),
               ],
             ),

@@ -2,7 +2,7 @@ name: devcamp_attendees
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.2 <3.0.0'
+  sdk: ">=2.19.2 <3.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -30,6 +30,8 @@ environment:
 dependencies:
   change_case: ^1.1.0
   cloud_firestore: ^4.4.4
+  country_flags: ^2.1.0
+  country_picker: ^2.0.20
   cupertino_icons: ^1.0.2
   firebase_auth: ^4.2.2
   firebase_auth_web: ^5.2.10
@@ -38,19 +40,17 @@ dependencies:
   firebase_storage: ^11.0.16
   flutter:
     sdk: flutter
-  flutter_form_builder: ^7.8.0
-  flutter_localization: ^0.1.10
+  flutter_form_builder: ^9.1.0
   flutter_rating_bar: ^4.0.1
   font_awesome_flutter: ^10.4.0
-  form_builder_validators: ^8.5.0
+  form_builder_validators: ^9.0.0
   get: ^4.6.5
   google_maps_flutter: ^2.2.5
-  google_maps_flutter_web: ^0.4.0+7
-  http: ^0.13.5
-  intl: ^0.17.0
+  google_maps_flutter_web: ^0.5.3
+  http: ^1.1.0
   provider: ^6.0.5
   rflutter_alert: ^2.0.4
-  syncfusion_flutter_datagrid: ^21.1.35
+  syncfusion_flutter_datagrid: ^22.2.7
   toggle_switch: ^2.0.1
 
 dev_dependencies:
@@ -62,7 +62,6 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

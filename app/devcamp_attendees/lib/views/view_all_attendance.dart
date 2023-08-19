@@ -35,8 +35,9 @@ class ViewAttendanceAllScreen extends StatefulWidget {
 
 class _ViewAttendanceAllScreenState extends State<ViewAttendanceAllScreen> {
   late double _height;
-  List<DevCampUser>? _searchList = [];
+  final List<DevCampUser> _searchList = [];
   bool checkBoxListTileIsCheck = false;
+  bool session1Attended = false;
   @override
   void initState() {
     super.initState();
@@ -105,6 +106,31 @@ class _ViewAttendanceAllScreenState extends State<ViewAttendanceAllScreen> {
                             _search('');
                           });
                         }),
+                  ),
+                  SizedBox(
+                    width: 200.0,
+                    child: CheckboxListTile(
+                        activeColor: Colors.pink[300],
+                        dense: true,
+                        //font change
+                        title: const Text(
+                          "Session 1 Attended",
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: 0.5),
+                        ),
+                        value: session1Attended,
+                        onChanged: (
+                          bool? val,
+                        ) {
+                          setState(() {
+                            var allusers = widget.devcampusers
+                                .where((user) => user.session1 == val);
+                            _searchList.clear();
+                            _searchList.addAll(allusers);
+                          });
+                        }),
                   )
                 ],
               ),
@@ -127,15 +153,16 @@ class _ViewAttendanceAllScreenState extends State<ViewAttendanceAllScreen> {
           columnSpacing: 45,
           columns: generateColumns([
             'NAME',
-            "SESSION 1",
-            "SESSION 2",
-            "SESSION 3",
+            'Country',
+            "SESSION 1 - Simon",
+            "SESSION 2 - Marcos",
+            "SESSION 3 - Felix",
             "SESSION 4",
             "SESSION 5",
             "SESSION 6",
             " Actions"
           ]),
-          rows: _searchList!.map((user) => generateRows(user)).toList(),
+          rows: _searchList.map((user) => generateRows(user)).toList(),
         ),
       ],
     );
@@ -165,6 +192,10 @@ class _ViewAttendanceAllScreenState extends State<ViewAttendanceAllScreen> {
         user: devcampuser,
         propertyName: "name",
       ).generateCells(),
+      AttendanceCell(
+        user: devcampuser,
+        propertyName: "country",
+      ).generateCells(),
       AttendanceCell(user: devcampuser, propertyName: "session1")
           .generateCells(),
       AttendanceCell(user: devcampuser, propertyName: "session2")
@@ -191,15 +222,15 @@ class _ViewAttendanceAllScreenState extends State<ViewAttendanceAllScreen> {
   }
 
   void _search(String value) {
-    _searchList!.clear();
+    _searchList.clear();
     var allusers = (checkBoxListTileIsCheck)
         ? widget.devcampusers.where((user) => user.userStatus == 'confirmed')
         : widget.devcampusers;
 
     if (value.isEmpty) {
-      _searchList!.addAll(allusers);
+      _searchList.addAll(allusers);
     } else {
-      _searchList!.addAll(allusers
+      _searchList.addAll(allusers
           .where(
               (user) => user.name!.toLowerCase().contains(value.toLowerCase()))
           .toList());

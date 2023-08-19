@@ -54,6 +54,7 @@ class _MapScreenState extends State<MapScreen> {
     List<Marker> markers = [];
 
     for (DevCampUser devcampuser in users) {
+      print({devcampuser.id});
       markers.add(
         Marker(
           markerId: MarkerId("Marker ${devcampuser.id}"),

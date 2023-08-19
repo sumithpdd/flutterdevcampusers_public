@@ -51,7 +51,7 @@ const addDevCampUser = async (req: Request, res: Response) => {
     whybootcamp,
   } = req.body;
   try {
-    const devcampuser = db.collection("devcampuser").doc();
+    const devcampuser = db.collection("devcampusers").doc();
     const devcampuserObject = {
       email: email,
       name: name,
@@ -138,7 +138,7 @@ async function getDevCampUserByName(
       .get();
 
     if (snapshot.empty) {
-      return res.status(200).json({ message: "No matching documents." });
+      return res.status(200).json({ message: "No matching devcampusers documents." });
     }
     snapshot.forEach((doc: any) => {
       allDevCampUsers.push({

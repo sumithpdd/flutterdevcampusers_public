@@ -1,9 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:devcamp_attendees/service/database_service.dart';
 import 'package:flutter/material.dart';
 
-import '../screens/main_screen.dart';
 import 'input_decoration.dart';
 
 class CreateAccountForm extends StatelessWidget {

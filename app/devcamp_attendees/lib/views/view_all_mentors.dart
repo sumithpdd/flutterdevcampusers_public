@@ -4,32 +4,30 @@ import 'package:change_case/change_case.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:toggle_switch/toggle_switch.dart';
 
-import '../models/dev_camp_user.dart';
-import '../models/model_util.dart';
+import '../models/dev_camp_mentor.dart';
 import '../util/navigator.dart';
 import '../util/util.dart';
-import 'modify_user.dart';
+import 'modify_mentor.dart';
 
-class ViewAllAttendeesScreen extends StatefulWidget {
-  final List<DevCampUser> devcampusers;
-  const ViewAllAttendeesScreen({
+class ViewAllMentorScreen extends StatefulWidget {
+  final List<DevCampMentor> devcampmentors;
+  const ViewAllMentorScreen({
     Key? key,
-    required this.devcampusers,
+    required this.devcampmentors,
   }) : super(key: key);
 
   @override
-  State<ViewAllAttendeesScreen> createState() => _ViewAllAttendeesScreenState();
+  State<ViewAllMentorScreen> createState() => _ViewAllMentorScreenState();
 }
 
-class _ViewAllAttendeesScreenState extends State<ViewAllAttendeesScreen> {
-  List<DevCampUser> searchList = [];
+class _ViewAllMentorScreenState extends State<ViewAllMentorScreen> {
+  List<DevCampMentor> searchList = [];
   bool checkBoxListTileIsCheck = false;
-  int? userStatusOptionsIndex;
+  int? mentorStatusOptionsIndex;
   String searchText = '';
   int resultCount = 0;
-  late AttendeeDataSource attendeeDataSource;
+  late MentorDataSource attendeeDataSource;
   final TextEditingController _controller = TextEditingController();
   final DataGridController _dataGridController = DataGridController();
   @override
@@ -58,7 +56,7 @@ class _ViewAllAttendeesScreenState extends State<ViewAllAttendeesScreen> {
 
     return Scaffold(
         appBar: AppBar(
-          title: const Text('flutter devcamp mentees - All'),
+          title: const Text('flutter devcamp Mentor - All'),
         ),
         body: Column(
           children: [
@@ -78,18 +76,6 @@ class _ViewAllAttendeesScreenState extends State<ViewAllAttendeesScreen> {
                       },
                       decoration: ThemeConstants.searchFieldDecoration,
                     ),
-                  ),
-                  ToggleSwitch(
-                    minWidth: 120.0,
-                    initialLabelIndex: userStatusOptionsIndex,
-                    totalSwitches: 3,
-                    labels: userStatusOptions,
-                    onToggle: (index) {
-                      setState(() {
-                        userStatusOptionsIndex = index!;
-                        _search();
-                      });
-                    },
                   ),
                   SizedBox(
                     width: 130.0,
@@ -111,7 +97,7 @@ class _ViewAllAttendeesScreenState extends State<ViewAllAttendeesScreen> {
                           setState(() {
                             searchText = '';
                             _controller.text = searchText;
-                            userStatusOptionsIndex = null;
+                            mentorStatusOptionsIndex = null;
                             _search();
                           });
                         }),
@@ -142,31 +128,15 @@ class _ViewAllAttendeesScreenState extends State<ViewAllAttendeesScreen> {
       },
       columns: <GridColumn>[
         createGridColumn('name'),
-        createGridColumn('userStatus'),
-        createGridColumn('isWinner'),
-        createGridColumn('winText'),
-        createGridColumn('session1'),
-        createGridColumn('session2'),
-        createGridColumn('session3'),
-        createGridColumn('session4'),
-        createGridColumn('session5'),
-        createGridColumn('session6'),
-        createGridColumn('assignment1link'),
-        createGridColumn('assignment2link'),
-        createGridColumn('assignment3link'),
-        createGridColumn('githubuserid'),
+        createGridColumn('bio'),
+        createGridColumn('email'),
+        createGridColumn('sessionTitle'),
+        createGridColumn('sessionTranscript'),
+        createGridColumn('sessionTranscriptSummary'),
+        createGridColumn('twitterhandle'),
         createGridColumn('linkedInhandle'),
         createGridColumn('slackId'),
-        createGridColumn('twitterhandle'),
-        createGridColumn('itexperience'),
-        createGridColumn('phone'),
-        createGridColumn('website'),
-        // createGridColumn('company'),
-        createGridColumn('email'),
-
         createGridColumn('profileImageUrl'),
-
-        createGridColumn('is_fav'),
         createGridColumn('Actions'),
       ],
       controller: _dataGridController,
@@ -175,23 +145,18 @@ class _ViewAllAttendeesScreenState extends State<ViewAllAttendeesScreen> {
 
   void _search() {
     searchList.clear();
-    String userStatusOption = userStatusOptionsIndex != null
-        ? userStatusOptions[userStatusOptionsIndex!]
-        : '';
-    var allusers = (userStatusOption.isNotEmpty)
-        ? widget.devcampusers
-            .where((user) => user.userStatus == userStatusOption.toLowerCase())
-        : widget.devcampusers;
+
+    var allmentors = widget.devcampmentors;
 
     if (searchText.isEmpty) {
-      searchList.addAll(allusers);
+      searchList.addAll(allmentors);
     } else {
-      searchList.addAll(allusers
-          .where((user) =>
-              user.name!.toLowerCase().contains(searchText.toLowerCase()))
+      searchList.addAll(allmentors
+          .where((mentor) =>
+              mentor.name!.toLowerCase().contains(searchText.toLowerCase()))
           .toList());
     }
-    attendeeDataSource = AttendeeDataSource(
+    attendeeDataSource = MentorDataSource(
         attendeeData: searchList, dataGridController: _dataGridController);
 
     resultCount = searchList.length;
@@ -199,52 +164,34 @@ class _ViewAllAttendeesScreenState extends State<ViewAllAttendeesScreen> {
   }
 }
 
-class AttendeeDataSource extends DataGridSource {
+class MentorDataSource extends DataGridSource {
   DataGridController dataGridController;
-  List<DevCampUser> attendeeData;
+  List<DevCampMentor> attendeeData;
 
   /// Creates the employee data source class with required details.
-  AttendeeDataSource({
+  MentorDataSource({
     required this.attendeeData,
     required this.dataGridController,
   }) {
     _attendeeDataGridRow = attendeeData
         .map<DataGridRow>((e) => DataGridRow(cells: [
               DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(columnName: 'bio', value: e.bio),
+              DataGridCell<String>(columnName: 'email', value: e.email),
               DataGridCell<String>(
-                  columnName: 'userStatus', value: e.userStatus),
-              DataGridCell<bool>(columnName: 'isWinner', value: e.isWinner),
-              DataGridCell<String>(columnName: 'winText', value: e.winText),
-              DataGridCell<bool>(columnName: 'session1', value: e.session1),
-              DataGridCell<bool>(columnName: 'session2', value: e.session2),
-              DataGridCell<bool>(columnName: 'session3', value: e.session3),
-              DataGridCell<bool>(columnName: 'session4', value: e.session4),
-              DataGridCell<bool>(columnName: 'session5', value: e.session5),
-              DataGridCell<bool>(columnName: 'session6', value: e.session6),
+                  columnName: 'sessionTitle', value: e.sessionTitle),
               DataGridCell<String>(
-                  columnName: 'assignment1link', value: e.assignment1link),
+                  columnName: 'sessionTranscript', value: e.sessionTranscript),
               DataGridCell<String>(
-                  columnName: 'assignment2link', value: e.assignment2link),
+                  columnName: 'sessionTranscriptSummary',
+                  value: e.sessionTranscriptSummary),
               DataGridCell<String>(
-                  columnName: 'assignment3link', value: e.assignment3link),
-              DataGridCell<String>(
-                  columnName: 'githubuserid', value: e.githubuserid),
+                  columnName: 'twitterhandle', value: e.twitterhandle),
               DataGridCell<String>(
                   columnName: 'linkedInhandle', value: e.linkedInhandle),
               DataGridCell<String>(columnName: 'slackId', value: e.slackId),
               DataGridCell<String>(
-                  columnName: 'twitterhandle', value: e.twitterhandle),
-              DataGridCell<String>(
-                  columnName: 'itexperience', value: e.itexperience),
-              DataGridCell<String>(columnName: 'phone', value: e.phone),
-              DataGridCell<String>(columnName: 'website', value: e.website),
-              // DataGridCell<String?>(
-              //     columnName: 'company', value: e.company!.name),
-              DataGridCell<String>(columnName: 'email', value: e.email),
-              DataGridCell<String>(
                   columnName: 'profileImageUrl', value: e.profileImageUrl),
-
-              DataGridCell<bool>(columnName: 'is_fav', value: e.isFav),
               DataGridCell<String>(columnName: 'Actions', value: e.id)
             ]))
         .toList();
@@ -256,22 +203,6 @@ class AttendeeDataSource extends DataGridSource {
         : Icon(FontAwesomeIcons.toggleOff, color: Colors.red);
   }
 
-  Widget getUserStatusWidget(String data) {
-    return (data.toLowerCase() == 'accepted')
-        ? Icon(Icons.check_box, color: Colors.grey)
-        : (data.toLowerCase() == 'confirmed')
-            ? Icon(Icons.badge, color: Colors.green)
-            : (data.toLowerCase() == 'certified')
-                ? Icon(FontAwesomeIcons.userGraduate, color: Colors.blue)
-                : Text(data);
-  }
-
-  Widget getWinnerWidget(bool data) {
-    return (data)
-        ? Icon(FontAwesomeIcons.trophy, color: Colors.blue)
-        : Icon(FontAwesomeIcons.faceSadTear, color: Colors.red);
-  }
-
   List<DataGridRow> _attendeeDataGridRow = [];
 
   @override
@@ -281,22 +212,17 @@ class AttendeeDataSource extends DataGridSource {
   DataGridRowAdapter buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-      if (dataGridCell.columnName.toString().startsWith("session")) {
-        return getAttendanceWidget(dataGridCell.value);
-      }
       if (dataGridCell.columnName.toString().startsWith("Actions")) {
         return actionCell(dataGridCell.value);
       }
-      if (dataGridCell.columnName.toString().startsWith("userStatus")) {
-        return getUserStatusWidget(dataGridCell.value.toString());
-      }
-      if (dataGridCell.columnName.toString().startsWith("isWinner")) {
-        return getWinnerWidget(dataGridCell.value);
-      }
+
       return Container(
         alignment: Alignment.center,
         padding: EdgeInsets.all(8.0),
-        child: Text(dataGridCell.value.toString()),
+        child: Text(
+          dataGridCell.value.toString(),
+          overflow: TextOverflow.ellipsis,
+        ),
       );
     }).toList());
   }
@@ -315,12 +241,12 @@ class AttendeeDataSource extends DataGridSource {
       ),
       onPressed: () {
         //SelectedIndex
-        var devcampuser =
-            attendeeData.firstWhere((devcampuser) => devcampuser.id == value);
+        var devcampmentor = attendeeData
+            .firstWhere((devcampmentor) => devcampmentor.id == value);
 
         Nav.route(NavigationService.navigatorKey.currentContext!,
-            ModifyUser(devCampUser: devcampuser));
-        // DatabaseService().deleteUser(user.id!);
+            ModifyMentor(devCampMentor: devcampmentor));
+        // DatabaseService().deleteMentor(mentor.id!);
       },
     );
   }

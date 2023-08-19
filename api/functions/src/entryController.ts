@@ -110,7 +110,7 @@ async function getEntryByemail(email: String, res: Response) {
       .get();
 
     if (snapshot.empty) {
-      return res.status(200).json({ message: "No matching documents." });
+      return res.status(200).json({ message: "No matching entries documents." });
     }
     snapshot.forEach((doc: any) => allEntries.push(doc.data()));
 

@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
-import 'package:intl/intl.dart';
 
 import 'package:devcamp_attendees/models/dev_camp_user.dart';
+
+import '../util/util.dart';
 
 class ModifyUser extends StatefulWidget {
   DevCampUser devCampUser;
@@ -29,7 +30,49 @@ class _ModifyUserState extends State<ModifyUser> {
   final _formKey = GlobalKey<FormBuilderState>();
   bool _nameHasError = false;
   bool _emailHasError = false;
-  var winTextOptions = ['Flutter Book Code', 'Jetbrains License', ''];
+  var winTextOptions = [
+    'Pawan Kumar Flutter Book Code  topmate.io/yourpawan/434748',
+    'Jetbrains License',
+    'Code with Andrea course codewithandrea.com',
+    'Flutter Firebase Festival f3.events'
+  ];
+  String country = '';
+  final _allCountries = [
+    'Algeria',
+    'Austria',
+    'Azerbaijan',
+    'Bangladesh',
+    'Brazil',
+    'Cameroon',
+    'Canada',
+    'Colombia',
+    'Ecuador',
+    'Egypt',
+    'Ethiopia',
+    'Gabon',
+    'Germany',
+    'Sri Lanka',
+    'India',
+    'Israel',
+    'Kenya',
+    'Mexico',
+    'Nepal',
+    'Nigeria',
+    'Pakistan',
+    'Philippines',
+    'Scotland',
+    'Sénégal',
+    'Spain',
+    'Tanzania',
+    'Turkey',
+    'UAE',
+    'United Kingdom',
+    'Ukraine',
+    'United States',
+    'Uruguay',
+  ];
+
+  Geo geo = Geo(lat: '55.378051', lng: '-3.435973');
 
   void _onChanged(dynamic val) => debugPrint(val.toString());
   _buildTextField(
@@ -51,6 +94,15 @@ class _ModifyUserState extends State<ModifyUser> {
       validator: validator,
       textInputAction: TextInputAction.next,
     );
+  }
+
+  @override
+  void initState() {
+    country = widget.devCampUser.address == null
+        ? _allCountries.first
+        : widget.devCampUser.address!.country!;
+    geo = allCountriesWithGeo[country]!;
+    super.initState();
   }
 
   @override
@@ -174,6 +226,64 @@ class _ModifyUserState extends State<ModifyUser> {
                         ),
                       ],
                     ),
+                    const SizedBox(height: 15),
+                    FormBuilderTextField(
+                      name: "address.street",
+                      decoration: InputDecoration(
+                        labelText: "street".toTitleCase(),
+                      ),
+                      textInputAction: TextInputAction.next,
+                    ),
+                    FormBuilderTextField(
+                      name: "address.city",
+                      decoration: InputDecoration(
+                        labelText: "city".toTitleCase(),
+                      ),
+                      textInputAction: TextInputAction.next,
+                    ),
+                    FormBuilderDropdown<String>(
+                      name: 'address.country',
+                      decoration: const InputDecoration(
+                        label: Text('Countries'),
+                      ),
+                      initialValue: country,
+                      onChanged: (value) {
+                        setState(() {
+                          country = value ?? '';
+                          changeGeo();
+                        });
+                      },
+                      items: _allCountries
+                          .map((e) => DropdownMenuItem(
+                                value: e,
+                                child: Text(e),
+                              ))
+                          .toList(),
+                    ),
+                    FormBuilderTextField(
+                      name: "address.zipcode",
+                      decoration: InputDecoration(
+                        labelText: "zipcode".toTitleCase(),
+                      ),
+                      textInputAction: TextInputAction.next,
+                    ),
+                    FormBuilderTextField(
+                      name: "address.geo.lat",
+                      decoration: InputDecoration(
+                        labelText: "lat".toTitleCase(),
+                      ),
+                      initialValue: geo.lat,
+                      textInputAction: TextInputAction.next,
+                    ),
+                    FormBuilderTextField(
+                      name: "address.geo.lng",
+                      decoration: InputDecoration(
+                        labelText: "lng".toTitleCase(),
+                      ),
+                      initialValue: geo.lng,
+                      textInputAction: TextInputAction.next,
+                    ),
+                    const SizedBox(height: 15),
                     FormBuilderChoiceChip<String>(
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       decoration:
@@ -196,6 +306,7 @@ class _ModifyUserState extends State<ModifyUser> {
                       ],
                       onChanged: _onChanged,
                     ),
+                    const SizedBox(height: 15),
                     FormBuilderTextField(
                       name: "assignment1link",
                       decoration: InputDecoration(
@@ -263,6 +374,12 @@ class _ModifyUserState extends State<ModifyUser> {
                           FormBuilderValidators.max(70),
                         ],
                       ),
+                    ),
+                    FormBuilderTextField(
+                      name: "profileImageUrl",
+                      decoration: InputDecoration(
+                        labelText: "profileImageUrl".toTitleCase(),
+                      ),
                     )
                   ],
                 ),
@@ -309,5 +426,13 @@ class _ModifyUserState extends State<ModifyUser> {
         ),
       ),
     );
+  }
+
+  void changeGeo() {
+    if (allCountriesWithGeo.containsKey(country)) {
+      geo = allCountriesWithGeo[country]!;
+      _formKey.currentState!.fields['address.geo.lat']!.didChange(geo.lat);
+      _formKey.currentState!.fields['address.geo.lng']!.didChange(geo.lng);
+    }
   }
 }

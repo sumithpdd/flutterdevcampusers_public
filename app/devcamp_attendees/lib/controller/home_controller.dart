@@ -1,7 +1,7 @@
 import 'dart:convert';
+import 'package:devcamp_attendees/models/dev_camp_mentor.dart';
 import 'package:devcamp_attendees/service/database_service.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart' as http;
 
 import '../models/dev_camp_user.dart';
 
@@ -12,9 +12,12 @@ class HomeController extends GetxController {
   var listGameUsers = <DevCampUser>[];
   var isFavOnly = false;
 
+  var listMentors = <DevCampMentor>[];
+
   @override
   void onReady() {
     onGetUserData();
+    onGetMentorData();
     super.onReady();
   }
 
@@ -35,6 +38,12 @@ class HomeController extends GetxController {
 
   void onGetUserData() async {
     listUsers = await DatabaseService().getAllUsers();
+
+    update();
+  }
+
+  void onGetMentorData() async {
+    listMentors = await DatabaseService().getAllMentors();
 
     update();
   }
@@ -88,7 +97,7 @@ class HomeController extends GetxController {
     listGameUsers = listUsers
         .where((user) =>
             user.userStatus != null &&
-            user.userStatus == "confirmed" &&
+            user.userStatus == "accepted" &&
             !user.isWinner!)
         .toList();
     listGameUsers.sort((usera, userb) =>

@@ -56,14 +56,23 @@ class DevCampUser {
   double? rating;
   Timestamp? acceptedOn, confirmedOn;
   String? feedback;
-  final Timestamp? timestamp = Timestamp.fromDate(DateTime.now());
+
+  final Timestamp? nowTimestamp = Timestamp.fromDate(DateTime.now());
+
   DevCampUser.fromJson(Map<String, dynamic> json) {
     id = json['id'].toString();
     name = json['name'];
     displayName = json['displayName'];
     email = json['email'];
-    address =
-        json['address'] != null ? Address.fromJson(json['address']) : null;
+    address = json['address'] != null
+        ? Address.fromJson(json['address'])
+        : Address(
+            street: '',
+            suite: '',
+            city: '',
+            country: '',
+            zipcode: '',
+            geo: Geo(lat: '', lng: ''));
     phone = json['phone'];
     website = json['website'];
     company =
@@ -174,7 +183,15 @@ class DevCampUser {
       'name': name,
       'displayName': displayName,
       'email': email,
-      'address': address!.toMap(),
+      'address': address == null
+          ? Address(
+              street: '',
+              suite: '',
+              city: '',
+              country: '',
+              zipcode: '',
+              geo: Geo(lat: '', lng: ''))
+          : address!.toMap(),
       'phone': phone,
       'website': website,
       'company': company == null ? company : company!.toMap(),
@@ -203,6 +220,9 @@ class DevCampUser {
 
   dynamic get(String propertyName) {
     var mapRep = toMap();
+    if (propertyName == 'country') {
+      return mapRep['address'][propertyName];
+    }
     if (mapRep.containsKey(propertyName)) {
       return mapRep[propertyName];
     }
@@ -257,7 +277,9 @@ class Address {
         city: data['city'] ?? "",
         country: data['country'] ?? "",
         zipcode: data['zipcode'] ?? "",
-        geo: data['geo'] != null ? Geo.fromDoc(data['geo']) : null);
+        geo: data['geo'] != null
+            ? Geo.fromDoc(data['geo'])
+            : Geo(lat: '', lng: ''));
   }
 
   Map<String, dynamic> toMap() {
