@@ -26,6 +26,30 @@ class ThemeConstants {
       ),
     ),
   );
+
+  static InputDecoration textFieldDecoration(
+          BuildContext context, String hintText) =>
+      InputDecoration(
+        contentPadding: const EdgeInsets.all(15),
+        hintText: hintText,
+        fillColor: Colors.black87,
+        border: OutlineInputBorder(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(14),
+          ),
+          borderSide: BorderSide(
+            color: Theme.of(context).colorScheme.secondary,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(14),
+          ),
+          borderSide: BorderSide(
+            color: Theme.of(context).colorScheme.secondary,
+          ),
+        ),
+      );
 }
 
 final allCountriesWithCodes = {
